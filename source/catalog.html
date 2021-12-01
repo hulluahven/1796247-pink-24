@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Каталог приложения Пинк</title>
+</head>
+<body class="page__body">
+  <header class="page__header">
+    <a class="page-header__logo" href="#">
+        <img class="page-header__logo-image" src="img/pink.svg" width="74" height="23" alt="Приложение для редактирования фотографий «Pink»">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть/закрыть меню</span>
+        </button>
+        <div class="main-nav__wrapper">
+          <!-- для центровки навигации -->
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="main-nav__item main-nav__item--current">
+              <a class="main-nav__link">
+                Фотографии
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">
+                Конкурс
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a href="https://htmlacademy.ru/intensive/adaptive">
+                HTML Academy
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+</header>
+<main class="page-main">
+  <div class="page-title__wrapper">
+    <h1 class="page-title">Фотографии пользователей</h1>
+  </div>
+  <section class="catalog">
+    <div class="catalog__wrapper">
+      <h2 class="catalog__title">Взгляните на фотографии, которые выкладывают пользователи!
+        Видите, как не хватает ваших?
+      </h2>
+      <article class="catalog__item-panorama post">
+      <!-- отдельный item для панорманого фото не модификатор -->
+      <h3 class="visually-hidden">Пост - панорама дня</h3>
+      <a class="post__link-panorama" href="#">
+        <img class="post__image-panorama" src="img/catalog/panorama.jpg" width="320" height="137" alt="Панорамный вид на гористую местность">
+      </a>
+      <div class="post__container-panorama">
+        <!-- только для панорамы в разных разрешениях -->
+        <div class="post__wrapper post__wrapper--panorama">
+          <!-- для содержимого всех постов втч панорамы мобильн  -->
+          <p class="post__author">
+            Анна<span class="post__note">(5 минут назад)</span>
+          </p>
+          <p class="post__text post__text--panorama">
+            Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе,
+              задавайте свои вопросы!
+          </p>
+          <div class="post__likes-wrapper post__likes-wrapper--panorama">
+            <!-- для позиционирования количества лайков -->
+            <p class="post__likes post__likes--panorama">Нравится: 215</p>
+          </div>
+        </div>
+      </div>
+      </article>
+      <ul class="catalog__list">
+        <li class="catalog__item post">
+          <h3 class="visually-hidden">Пост пользователя</h3>
+          <a class="post-link" href="#">
+            <img class="post__image" src="img/catalog/skoda.jpg" width="280" height="180" alt="Фото белого автомобиля «Skoda» на фоне черной стены">
+          </a>
+          <div class="post__wrapper">
+            <p class="post__author">
+              Левон<span class="post__note">(5 часов назад)</span>
+            </p>
+            <p class="post__text">
+              Вчера он на луну летал, сегодня в руки к нам попал
+            </p>
+            <div class="post__likes-wrapper">
+              <!-- для позиционирования количества лайков -->
+              <p class="post__likes">Нравится: 356</p>
+            </div>
+          </div>
+        </li>
+        <li class="catalog__item post">
+          <h3 class="visually-hidden">Пост пользователя</h3>
+          <a class="post-link" href="#">
+            <img class="post__image" src="img/catalog/drums.jpg" width="280" height="180" alt="Фото барабанной установки">
+          </a>
+          <div class="post__wrapper">
+            <p class="post__author">
+              Антон<span class="post__note">(12 часов назад)</span>
+            </p>
+            <p class="post__text">
+              Соседи будут рады!
+            </p>
+            <div class="post__likes-wrapper">
+              <!-- для позиционирования количества лайков -->
+              <p class="post__likes">Нравится: 666</p>
+            </div>
+          </div>
+        </li>
+        <li class="catalog__item post">
+          <h3 class="visually-hidden">Пост пользователя</h3>
+          <a class="post-link" href="#">
+            <img class="post__image" src="img/catalog/window-wall.jpg" width="280" height="180" alt="Фото облаков через панорамное окно">
+          </a>
+          <div class="post__wrapper">
+            <p class="post__author">
+              Борис<span class="post__note">(20 часов назад)</span>
+            </p>
+            <p class="post__text">
+              Здесь могла быть ваша цитата о высоком и вечном
+            </p>
+            <div class="post__likes-wrapper">
+              <!-- для позиционирования количества лайков -->
+              <p class="post__likes">Нравится: 215</p>
+            </div>
+          </div>
+        </li>
+        <li class="catalog__item post">
+          <h3 class="visually-hidden">Пост пользователя</h3>
+          <a class="post-link" href="#">
+            <img class="post__image" src="img/catalog/tent.jpg" width="280" height="180" alt="Фото мини-ярмарки арбузов и дынь">
+          </a>
+          <div class="post__wrapper">
+            <p class="post__author">
+              Сергей<span class="post__note">(25 часов назад)</span>
+            </p>
+            <p class="post__text">
+              Самая кубанская в мире!
+            </p>
+            <div class="post__likes-wrapper">
+              <!-- для позиционирования количества лайков -->
+              <p class="post__likes">Нравится: 4</p>
+            </div>
+          </div>
+        </li>
+        <li class="catalog__item post">
+          <h3 class="visually-hidden">Пост пользователя</h3>
+          <a class="post-link" href="#">
+            <img class="post__image" src="img/catalog/legs-rock.jpg" width="280" height="180" alt="Фото с ногами пользователя, сидящего на скале">
+          </a>
+          <div class="post__wrapper">
+            <p class="post__author">
+              Максим<span class="post__note">(40 часов назад)</span>
+            </p>
+            <p class="post__text">
+              Где снег-то?
+            </p>
+            <div class="post__likes-wrapper">
+              <!-- для позиционирования количества лайков -->
+              <p class="post__likes">Нравится: 150</p>
+            </div>
+          </div>
+        </li>
+        <li class="catalog__item post">
+          <h3 class="visually-hidden">Пост пользователя</h3>
+          <a class="post-link" href="#">
+            <img class="post__image" src="img/catalog/plane-wing.jpg" width="280" height="180" alt="Фото крыла самолета, на фоне заката">
+          </a>
+          <div class="post__wrapper">
+            <p class="post__author">
+              Надежда<span class="post__note">(45 часов назад)</span>
+            </p>
+            <p class="post__text">
+              Всем GM и взаимные лайки
+            </p>
+            <div class="post__likes-wrapper">
+              <!-- для позиционирования количества лайков -->
+              <p class="post__likes">Нравится: 150</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="photo-tool">
+    <h2 class="visually-hidden">Инструмент для обработки изображений</h2>
+    <div class="photo-tool__wrapper">
+      <p class="photo-tool__text">Затмите их всех! Выкладывайте все, что накопилось в телефоне</p>
+      <form class="photo-tool__form form-toggle" method="post" action="https://echo.htmlacademy.ru">
+        <div class="form-toggle__image-wrapper">
+          <img class="form-toggle__image" src="img/catalog/winter.jpg" width="280" height="374" alt="Фотография заснеженной лесной дороги">
+        </div>
+        <fieldset class="form-toggle__filter">
+          <legend class="visually-hidden">Редактор фото</legend>
+          <ul class="form-toggle__list">
+            <li class="form-toggle__item form-toggle__item--active">
+              <label class="form-toggle__label" for="cut"><span class="visually-hidden">Обрезка</span></label>
+              <input class="form-toggle__input" id="cut" type="range" name="filter" min="0" max="100" step="1" value="90">
+            </li>
+            <li class="form-toggle__item">
+              <label class="form-toggle__label" for="fill"><span class="visually-hidden">Заливка</span></label>
+              <input class="form-toggle__input" id="fill" type="range" name="filter" min="0" max="100" step="1" value="20">
+            </li>
+            <li class="form-toggle__item">
+              <label class="form-toggle__label" for="contrast"><span class="visually-hidden">Контраст</span></label>
+              <input class="form-toggle__input" id="contrast" type="range" name="filter" min="0" max="100" step="1" value="50">
+            </li>
+          </ul>
+            <div class="form-toggle__button-wrapper">
+              <button class="form-toggle__button form-toggle__button--submit" type="submit">Запостить</button>
+              <button class="form-toggle__button form-toggle__button--reset" type="reset">Отмена</button>
+            </div>
+        </fieldset>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="page-footer">
+  <div class="page-footer__wrapper">
+    <a class="page-footer__logo" href="#">
+      <img class="page-footer__img" src="img/footer-logo.svg" width="145" height="40" alt="Приложение для редактирования фотографий «Pink»">
+    </a>
+  </div>
+  <div class="page-footer__social social">
+    <ul class="social__list">
+      <li class="social__item">
+        <a class="social__link social__link--twitter" href="#">
+          <span class="visually-hidden">Мы в Твиттере</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--facebook" href="#">
+          <span class="visually-hidden">Мы в Фейсбуке</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--youtube" href="#">
+          <span class="visually-hidden">Мы на Ютубе</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="page-footer__copyright copyright">
+    <b class="copyright__text">Разработано:</b>
+    <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+  </div>
+</footer>
+</body>
+</html>
