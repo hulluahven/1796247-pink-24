@@ -2,10 +2,11 @@
 <html class="page" lang="ru">
 <head>
     <meta charset="utf-8">
+    <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Конкурс от приложения Пинк</title>
 </head>
 <body class="page__body">
-    <header class="page__header">
+    <header class="page-header">
         <a class="page-header__logo" href="#">
             <img class="page-header__logo-image" src="img/pink.svg" width="74" height="23" alt="Приложение для редактирования фотографий «Pink»">
           </a>
@@ -32,7 +33,7 @@
                   </a>
                 </li>
                 <li class="main-nav__item">
-                  <a href="https://htmlacademy.ru/intensive/adaptive">
+                  <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive">
                     HTML Academy
                   </a>
                 </li>
@@ -40,9 +41,9 @@
             </div>
           </nav>
     </header>
-    <main class="page-main">
+    <main class="form-main">
         <div class="page-title__wrapper">
-          <h1 class="page-title">Конкурс на самое безбашенное путушествие с Пинк</h1>
+          <h1 class="page-title page-title--form">Конкурс на самое безбашенное путушествие с Пинк</h1>
         </div>
         <section class="form">
             <div class="form__wrapper">
@@ -50,7 +51,7 @@
                     <h2 class="visually-hidden">Форма заявки для участия в конкурсе</h2>
                 </header>
                 <p class="form__text">
-                    Поделитесь своей историей и получите шанс выйграть ценный приз - 1000 миль на вашу бонусную карту!
+                    Поделитесь своей историей и получите шанс выйграть ценный приз 	&mdash; 1000 миль на вашу бонусную карту!
                     Пожалуйста, заполните форму ниже:
                 </p>
                 <form class="form__page-form contest-form" method="POST" action="https://echo.htmlacademy.ru">
@@ -121,7 +122,7 @@
                     </fieldset>
                     <div class="contest-form__fieldset-wrapper contest-form__fieldset-wrapper--application">
                         <fieldset class="contest-form__fieldset radio-fieldset">
-                            <legend class="radio-fieldset__title">С каким прилоением путешествовали?</legend>
+                            <legend class="radio-fieldset__title">С каким приложением путешествовали?</legend>
                             <ul class="radio-fieldset__list">
                                 <li class="radio-fieldset__item">
                                     <label class="radio-fieldset__label" for="pink-ios">Pink для iOS</label>
@@ -141,14 +142,14 @@
                     <fieldset class="contest-form__fieldset textarea-fieldset">
                         <legend class="textarea-fieldset__title">Опишите свои эмоции</legend>
                         <label class="visually-hidden" for="review">Оставьте пожалуйста отзыв о путешествии</label>
-                        <textarea class="textarea-fieldset__text"
+                        <textarea class="textarea-fieldset__input"
                         id="review" name="text" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
                     </fieldset>
                     <div class="contest-form__button-wrapper">
                       <!-- обертка для позиционирования -->
                       <button class="contest-form__button button" type="submit">Отправить форму</button>
                       <!-- все кнопки будут зелёные -->
-                      <p class="contest-form__note"><span class="contest-form__point">*</span>-обязательные поля</p>
+                      <p class="contest-form__note"><span class="contest-form__point">*</span> 	&mdash;  обязательные поля</p>
                     </div>
                 </form>
             </div>
