@@ -1,0 +1,26 @@
+.text-fieldset {
+  border: none;
+}
+
+.text-fieldset__label {
+  color: @cerise;
+  text-transform: uppercase;
+}
+
+.text-fieldset__input {
+  font-size: 18px;
+  line-height: 30px;
+  background-color: transparent;
+  border: 2px solid @whisper;
+  border-radius: 1px;
+  color: @dusky-blue-gray;
+  // не применяется цвет placeholder
+}
+
+.text-fieldset__title--hidden {
+  font-size: 0;
+}
+
+.text-fieldset__input::placeholder {
+  color: @dusky-blue-gray;
+}
