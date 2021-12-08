@@ -1,10 +1,65 @@
 .promo {
-  display: none;
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: inherit;
+    min-height: 358px;
+  }
 }
 // появление от разрешения таблетки
 
+.promo__wrapper {
+  @media (min-width: @tablet-width) {
+    padding: 0 20px 0 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 120px 150px 120px 150px;
+  }
+}
+
+.promo__content-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 69px;
+  }
+}
+
 .promo__title {
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 30px;
+  }
+}
+
+.promo__text {
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.promo__link {
+  @media (min-width: @tablet-width) {
+    color: @cerise;
+    text-decoration: underline;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }

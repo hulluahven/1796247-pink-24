@@ -8,6 +8,26 @@
   font-weight: 300;
 }
 
+.contacts__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
 .contacts__text {
   font-size: 18px;
   line-height: 25px;
@@ -34,4 +54,13 @@
   width: 320px;
   height: 200px;
   border: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    height: 374px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 502px;
+  }
 }

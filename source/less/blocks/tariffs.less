@@ -4,6 +4,27 @@
   background: url("../../img/table-background.svg") no-repeat center;
 }
 
+.tariffs__wrapper {
+  padding: 127px 0 100px 0;
+  width: 320px;
+  min-width: 100%;
+
+  @media (min-width: @tablet-width) {
+    padding: 114px 20px 70px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 159px 130px 98px 130px;
+  }
+}
+
 .tariffs__table {
   margin: 0 auto;
+}
+
+
+.tariffs__toggles {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Пинк</title>
   </head>
@@ -77,10 +78,11 @@
         <h2 class="visually-hidden">
           Преимущества приложения «Pink».
         </h2>
-        <p class="advantages__slogan">Устали от серости мегаполиса?</p>
+        <div class="advantages__slogan-wrapper">
+          <p class="advantages__slogan">Устали от серости мегаполиса?</p>
         <p class="advantages__slogan">Нам есть, что вам предложить!</p>
+        </div>
         <div class="advantages__list-wrapper">
-
           <ul class="advantages__list">
             <li class="advantages__item">
               <h3 class="advantages__title">Поднимает настроение</h3>
@@ -104,13 +106,15 @@
     <section class="promo">
       <div class="promo__wrapper">
       <img class="promo__logo" src="img/breguet.png" width="238" height="276" alt="Циферблат с обозначением «24 часа»">
-      <h2 class="promo__title">
-        Эффект на 24 часа!
-      </h2>
-      <p class="promo__text">
-        Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки
-      </p>
-      <a class="promo__link" href="#">Узнать больше об исследовании</a>
+        <div class="promo__content-wrapper">
+          <h2 class="promo__title">
+            Эффект на 24 часа!
+          </h2>
+          <p class="promo__text">
+            Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки
+          </p>
+          <a class="promo__link" href="#">Узнать больше об исследовании</a>
+        </div>
       </div>
     </section>
     <section class="reviews">
@@ -140,7 +144,7 @@
       </div>
     </section>
     <section class="tariffs">
-      <div class="tariffs-wrapper">
+      <div class="tariffs__wrapper">
         <!-- для центровки -->
         <div class="tariffs__slider slider">
           <h2 class="visually-hidden">Наши тарифы</h2>
@@ -189,28 +193,36 @@
       </p>
     </section>
     <section class="contacts">
-      <div class="contacts-wrapper">
+      <div class="contacts__wrapper">
         <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
-          <p class="contacts__text">Звоните:</p>
-          <p class="contacts__phone">
-            <a class="contacts__link" href="tel:+78125556666">
-              <span class="visually-hidden">Наш телефон</span>
-              <span class="contacts__phone-name">+7 (812) 555-66-66</span>
-            </a>
-          </p>
-          <p class="contacts__text">Пишите:</p>
-          <p class="contacts__mail">
-            <a class="contacts__link" href="malto:mail@htmlacademy.ru">
-              <span class="visually-hidden">Наша электронная почта</span>
-              <span class="contacts__mail-name">mail@htmlacademy.ru</span>
-            </a>
-          </p>
-          <p class="contacts__text">Приезжайте в гости:</p>
-          <p class="contacts__address">
-            <a class="contacts__link" href="#">
-              <span class="contacts__address-name">ул. Большая Конюшенная, 19/8</span>
-            </a>
-          </p>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <p class="contacts__text">Звоните:</p>
+            <p class="contacts__phone">
+              <a class="contacts__link" href="tel:+78125556666">
+                <span class="visually-hidden">Наш телефон</span>
+                <span class="contacts__phone-name">+7 (812) 555-66-66</span>
+              </a>
+            </p>
+          </li>
+          <li class="contacts__item">
+            <p class="contacts__text">Пишите:</p>
+            <p class="contacts__mail">
+              <a class="contacts__link" href="malto:mail@htmlacademy.ru">
+                <span class="visually-hidden">Наша электронная почта</span>
+                <span class="contacts__mail-name">mail@htmlacademy.ru</span>
+              </a>
+            </p>
+          </li>
+          <li class="contacts__item">
+            <p class="contacts__text">Приезжайте в гости:</p>
+            <p class="contacts__address">
+              <a class="contacts__link" href="#">
+                <span class="contacts__address-name">ул. Большая Конюшенная, 19/8</span>
+              </a>
+            </p>
+          </li>
+        </ul>
       </div>
       <div class="contacts__map">
         <iframe class="contacts__google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.6507330280282!2d30.322602829268014!3d59.93873067066122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x93854e2820c04f4e!2zNTnCsDU2JzE5LjQiTiAzMMKwMTknMjMuMyJF!5e0!3m2!1sru!2sru!4v1638614358035!5m2!1sru!2sru"
@@ -225,7 +237,6 @@
       <a class="page-footer__logo" href="#">
         <img class="page-footer__img" src="img/footer-logo.svg" width="145" height="40" alt="Приложение для редактирования фотографий «Pink»">
       </a>
-    </div>
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
@@ -249,6 +260,7 @@
       <b class="copyright__text">Разработано:</b>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
     </div>
+  </div>
   </footer>
   </body>
 </html>
