@@ -1,8 +1,19 @@
 .page-header {
   background-color: @dusky-blue-gray;
-  padding: 23px 10px 12px 19px;
+  padding: 23px 0 12px 0;
 
   @media (min-width: @tablet-width) {
-    padding: 43px 11px 37px 90px;
+    padding: 43px 0 37px 0;
+  }
+}
+
+.page-header__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    padding: 0 130px 0 130px;
+    justify-content: center;
+    flex-direction: row;
   }
 }

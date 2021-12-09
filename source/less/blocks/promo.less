@@ -6,6 +6,7 @@
   @media (min-width: @tablet-width) {
     display: inherit;
     min-height: 358px;
+    text-align: start;
   }
 }
 // появление от разрешения таблетки
@@ -14,11 +15,11 @@
   @media (min-width: @tablet-width) {
     padding: 0 20px 0 20px;
     display: flex;
-    align-items: center;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 120px 150px 120px 150px;
+    padding: 120px 130px 120px 130px;
+    justify-content: center;
   }
 }
 
@@ -26,8 +27,12 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     padding-left: 69px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 534px;
   }
 }
 
