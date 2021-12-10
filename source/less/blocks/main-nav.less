@@ -1,5 +1,25 @@
+.main-nav {
+  // display: none;
+}
+
 .main-nav__list {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: @desktop-width) {
+    width: 620px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.main-nav__wrapper {
+  @media (min-width: @desktop-width) {
+    padding-left: 170px;
+  }
 }
 
 .main-nav__link {
@@ -8,4 +28,10 @@
   font-weight: 700;
   color: @basic-white;
   text-transform: uppercase;
+
+  @media (min-width: @desktop-width) {
+    text-transform: none;
+    font-weight: 400;
+    line-height: 18px;
+  }
 }
