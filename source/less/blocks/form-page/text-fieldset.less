@@ -8,6 +8,54 @@
   list-style: none;
 }
 
+.text-fieldset__list--member {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    gap: 20px;
+  }
+}
+
+.text-fieldset__item--member {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.text-fieldset__item--mail,
+.text-fieldset__item--phone {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+.text-fieldset--member {
+  margin: 0;
+  padding: 0 0 15px 0;
+}
+
+.text-fieldset--contacts {
+  margin: 0;
+  padding: 0 0 15px 0;
+}
+
+
 .text-fieldset__label {
   color: @cerise;
   text-transform: uppercase;

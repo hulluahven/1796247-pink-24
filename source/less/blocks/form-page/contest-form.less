@@ -1,9 +1,80 @@
 .contest-form {
   padding: 0 20px 0 20px;
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr);
+  grid-template-areas:
+    "member-data"
+    "checkbox-fieldset"
+    "member-contacts"
+    "radio-fieldset"
+    "textarea-fieldset"
+    "button";
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    grid-template-areas:
+      "member-data member-data"
+      "radio-fieldset radio-fieldset"
+      "member-contacts member-contacts"
+      "checkbox-fieldset checkbox-fieldset"
+      "textarea-fieldset textarea-fieldset"
+      "button button";
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(2, 435px);
+    grid-template-areas:
+      "member-data radio-fieldset"
+      "member-contacts member-contacts"
+      "checkbox-fieldset checkbox-fieldset"
+      "textarea-fieldset textarea-fieldset"
+      "button button";
+    column-gap: 70px;
+    width: 960px;
+    margin: 0 auto;
+  }
 }
 
-.contest-form__fieldset-wrapper {
+.contest-form__fieldset-wrapper--member {
+  grid-area: member-data;
+}
+
+.contest-form__fieldset-wrapper--achievements {
+  grid-area: checkbox-fieldset;
   background-color: @white-smoke;
+
+  @media (min-width: @tablet-width) {
+    background-color: inherit;
+    padding-bottom: 22px;
+  }
+}
+
+.contest-form__fieldset-wrapper--contacts {
+  grid-area: member-contacts;
+}
+
+.contest-form__fieldset-wrapper--radio {
+  grid-area: radio-fieldset;
+  background-color: @white-smoke;
+
+  @media (min-width: @tablet-width) {
+    background-color: inherit;
+  }
+}
+
+.contest-form__fieldset-wrapper--textarea {
+  grid-area: textarea-fieldset;
+}
+
+.contest-form__button-wrapper {
+  grid-area: button;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .contest-form__note {

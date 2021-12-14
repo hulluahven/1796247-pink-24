@@ -8,6 +8,7 @@
 </head>
 <body class="page__body">
     <header class="page-header">
+      <div class="page-header__wrapper">
         <a class="page-header__logo" href="#">
             <img class="page-header__logo-image" src="img/pink.svg" width="74" height="23" alt="Приложение для редактирования фотографий «Pink»">
           </a>
@@ -41,6 +42,7 @@
               </ul>
             </div>
           </nav>
+        </div>
     </header>
     <main class="form-main">
         <div class="page-title__wrapper">
@@ -56,26 +58,28 @@
                     Пожалуйста, заполните форму ниже:
                 </p>
                 <form class="form__page-form contest-form" method="POST" action="https://echo.htmlacademy.ru">
-                    <fieldset class="contest-form__fieldset text-fieldset">
-                        <legend class="visually-hidden">Укажите вашу фамилию, имя и отчество</legend>
-                        <ul class="text-fieldset__list text-fieldset__list--member">
-                            <li class="text-fieldset__item text-fieldset__item--member">
-                                <label class="text-fieldset__label text-fieldset__label--member" for="member-surname">Фамилия:</label>
-                                <input class="text-fieldset__input text-fieldset__input--member" id="member-surname" type="text" name="surname"
-                                  placeholder="Укажите фамилию*" required>
-                            </li>
-                            <li class="text-fieldset__item text-fieldset__item--member">
-                                <label class="text-fieldset__label text-fieldset__label--member" for="member-name">Имя:</label>
-                                <input class="text-fieldset__input text-fieldset__input--member" id="member-name" type="text" name="name"
-                                  placeholder="Введите ваше имя*" required>
-                            </li>
-                            <li class="text-fieldset__item text-fieldset__item--member">
-                                <label class="text-fieldset__label text-fieldset__label--member" for="member-patronymic">Отчество:</label>
-                                <input class="text-fieldset__input text-fieldset__input--member" id="member-patronymic" type="text" name="patronymic"
-                                  placeholder="Ну и отчество тоже">
-                            </li>
-                        </ul>
-                    </fieldset>
+                    <div class="contest-form__fieldset-wrapper contest-form__fieldset-wrapper--member">
+                    <fieldset class="contest-form__fieldset text-fieldset text-fieldset--member">
+                      <legend class="visually-hidden">Укажите вашу фамилию, имя и отчество</legend>
+                      <ul class="text-fieldset__list text-fieldset__list--member">
+                          <li class="text-fieldset__item text-fieldset__item--member">
+                              <label class="text-fieldset__label text-fieldset__label--member" for="member-surname">Фамилия:</label>
+                              <input class="text-fieldset__input text-fieldset__input--member" id="member-surname" type="text" name="surname"
+                                placeholder="Укажите фамилию*" required>
+                          </li>
+                          <li class="text-fieldset__item text-fieldset__item--member">
+                              <label class="text-fieldset__label text-fieldset__label--member" for="member-name">Имя:</label>
+                              <input class="text-fieldset__input text-fieldset__input--member" id="member-name" type="text" name="name"
+                                placeholder="Введите ваше имя*" required>
+                          </li>
+                          <li class="text-fieldset__item text-fieldset__item--member">
+                              <label class="text-fieldset__label text-fieldset__label--member" for="member-patronymic">Отчество:</label>
+                              <input class="text-fieldset__input text-fieldset__input--member" id="member-patronymic" type="text" name="patronymic"
+                                placeholder="Ну и отчество тоже">
+                          </li>
+                      </ul>
+                  </fieldset>
+                    </div>
                     <div class="contest-form__fieldset-wrapper contest-form__fieldset-wrapper--achievements">
                         <!-- обёртка для позиционирования и сетки -->
                         <fieldset class="contest-form__fieldset checkbox-fieldset">
@@ -108,7 +112,8 @@
                             </ul>
                         </fieldset>
                     </div>
-                    <fieldset class="contest-form__fieldset text-fieldset">
+                    <div class="contest-form__fieldset-wrapper contest-form__fieldset-wrapper--contacts">
+                      <fieldset class="contest-form__fieldset text-fieldset text-fieldset--contacts">
                         <legend class="text-fieldset__title text-fieldset__title--hidden">Контактная информация</legend>
                         <ul class="text-fieldset__list text-fieldset__list--contacts">
                             <li class="text-fieldset__item text-fieldset__item--phone">
@@ -121,31 +126,34 @@
                             </li>
                         </ul>
                     </fieldset>
-                    <div class="contest-form__fieldset-wrapper contest-form__fieldset-wrapper--application">
-                        <fieldset class="contest-form__fieldset radio-fieldset">
-                            <legend class="radio-fieldset__title">С каким приложением путешествовали?</legend>
-                            <ul class="radio-fieldset__list">
-                                <li class="radio-fieldset__item">
-                                    <label class="radio-fieldset__label" for="pink-ios">Pink для iOS</label>
-                                    <input class="radio-fieldset__input" id="pink-ios" type="radio" name="system" value="ios" checked>
-                                </li>
-                                <li class="radio-fieldset__item">
-                                    <label class="radio-fieldset__label" for="pink-android">Pink на Android</label>
-                                    <input class="radio-fieldset__input" id="pink-android" type="radio" name="system" value="android">
-                                </li>
-                                <li class="radio-fieldset__item">
-                                    <label class="radio-fieldset__label" for="pink-windows">Windows Phone</label>
-                                    <input class="radio-fieldset__input" id="pink-windows" type="radio" name="system" value="windows">
-                                </li>
-                            </ul>
-                        </fieldset>
                     </div>
-                    <fieldset class="contest-form__fieldset textarea-fieldset">
+                    <div class="contest-form__fieldset-wrapper contest-form__fieldset-wrapper--radio">
+                      <fieldset class="contest-form__fieldset radio-fieldset">
+                        <legend class="radio-fieldset__title">С каким приложением путешествовали?</legend>
+                        <ul class="radio-fieldset__list">
+                            <li class="radio-fieldset__item">
+                                <label class="radio-fieldset__label" for="pink-ios">Pink для iOS</label>
+                                <input class="radio-fieldset__input" id="pink-ios" type="radio" name="system" value="ios" checked>
+                            </li>
+                            <li class="radio-fieldset__item">
+                                <label class="radio-fieldset__label" for="pink-android">Pink на Android</label>
+                                <input class="radio-fieldset__input" id="pink-android" type="radio" name="system" value="android">
+                            </li>
+                            <li class="radio-fieldset__item">
+                                <label class="radio-fieldset__label" for="pink-windows">Windows Phone</label>
+                                <input class="radio-fieldset__input" id="pink-windows" type="radio" name="system" value="windows">
+                            </li>
+                        </ul>
+                    </fieldset>
+                    </div>
+                    <div class="contest-form__fieldset-wrapper contest-form__fieldset-wrapper--textarea">
+                      <fieldset class="contest-form__fieldset textarea-fieldset">
                         <legend class="textarea-fieldset__title">Опишите свои эмоции</legend>
                         <label class="visually-hidden" for="review">Оставьте пожалуйста отзыв о путешествии</label>
                         <textarea class="textarea-fieldset__input"
                         id="review" name="text" rows="5" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
                     </fieldset>
+                    </div>
                     <div class="contest-form__button-wrapper">
                       <!-- обертка для позиционирования -->
                       <button class="contest-form__button button" type="submit">Отправить форму</button>
