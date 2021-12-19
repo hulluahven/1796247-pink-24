@@ -1,14 +1,78 @@
 .table {
   text-align: left;
-  border-collapse: collapse;
-  background-color: @basic-white;
+  border-collapse: inherit;
+  width: 940px;
+  border-spacing: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
 }
 
 .table__title {
-  background-color: @dusky-blue-gray;
-  text-align: center;
   color: @basic-white;
-  border: 2px solid @dusky-blue-gray;
+  text-align: center;
+}
+
+.table__header {
+  background-color: @dusky-blue-gray;
+}
+
+.table__header:nth-child(2) {
+  border-radius: 2px 0 0 0;
+}
+
+.table__header:nth-child(4) {
+  border-radius: 0 2px 0 0;
+}
+
+.table__header--hidden {
+  background-color: inherit;
+  border-bottom: 2px solid #e5e5e5;
+  border-left: 2px solid transparent;
+}
+
+.table__header--promotion {
+  border-right: 2px solid @whisper;
+  border-left: 2px solid @whisper;
+}
+
+.table__content {
+  background-color: @basic-white;
+}
+
+.table__feature {
+  border: 2px solid @whisper;
+}
+
+.table__feature:not(:first-child) {
+  border-top: none;
+}
+
+.table__feature--pink {
+  border-bottom: 2px solid @whisper;
+  border-radius: 2px 0 0 0;
+  border-right: none;
+  border-top: none;
+}
+
+.table__feature--smile {
+  border-top: none;
+  border-bottom: 2px solid @whisper;
+  border-right: none;
+}
+
+.table__feature--comment {
+  border-top: none;
+  border-right: none;
+}
+
+.table__feature:nth-child(2) {
+  border-right: none;
+}
+
+.table__feature:nth-child(4) {
+  border-left: none;
 }
 
 .table__name {
