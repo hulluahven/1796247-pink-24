@@ -5,6 +5,19 @@
 
 .post__container-panorama {
   padding: 0 20px 0 20px;
+
+  @media (min-width: @desktop-width) {
+    padding: 0 130px 0 130px;
+    width: 940px;
+    margin: 0 auto;
+  }
+}
+
+.post__image-panorama {
+  width: 100%;
+  height: auto;
+  display: block;
+  // img по умолч строчные
 }
 
 .post__wrapper {
@@ -13,6 +26,7 @@
 
 .post__author {
   font-weight: 700;
+  margin-top: 0;
 }
 
 .post__note {
