@@ -2,10 +2,26 @@
   text-align: center;
 }
 
+.reviews__wrapper {
+  padding: 41px 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    padding: 22px 20px 15px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 50px 130px 32px;
+  }
+}
+
 .reviews__item {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  margin: 0;
 
   @media (min-width: @desktop-width) {
     margin: 0 auto;
@@ -13,15 +29,50 @@
   }
 }
 
+.reviews__author-info {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    width: 700px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../../img/quote.svg") no-repeat;
+      top: 19px;
+      left: 45%;
+      width: 79px;
+      height: 63px;
+    }
+  }
+}
+
 .reviews__text {
   line-height: 30px;
-
-  @media (max-width: @mobile-width-only) {
-    order: 2;
-  }
+  margin: 0;
+  padding-top: 13px;
 
   @media (min-width: @tablet-width) {
     font-size: 18px;
+    padding-top: 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 134px;
   }
 }
 
@@ -33,6 +84,7 @@
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
+    padding-top: 36px;
   }
 
   @media (min-width: @desktop-width) {
@@ -41,8 +93,14 @@
 }
 
 .reviews__author-data {
+  margin: 0;
+
   @media (max-width: @mobile-width-only) {
     display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 2px;
   }
 
   @media (min-width: @desktop-width) {
@@ -51,17 +109,27 @@
   }
 }
 
-.reviews__wrapper {
-  padding: 0 20px 40px 20px;
+.reviews__previous,
+.reviews__next {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+  }
+}
+
+.reviews__toggles {
+  padding-top: 34px;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+
 
   @media (min-width: @tablet-width) {
-    padding-top: 22px;
+    padding-top: 43px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 50px 130px 41px;
+    display: none;
   }
 }

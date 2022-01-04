@@ -9,17 +9,28 @@
     text-align: start;
   }
 }
-// появление от разрешения таблетки
 
 .promo__wrapper {
   @media (min-width: @tablet-width) {
-    padding: 0 20px 0 20px;
+    padding: 54px 20px 0 20px;
     display: flex;
+    width: 620px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 120px 130px 120px 130px;
+    padding: 31px 130px 66px 130px;
     justify-content: center;
+    width: inherit;
+    margin: 0;
+    background-color: @white-smoke;
+  }
+}
+
+.promo__logo {
+  @media (min-width: @desktop-width) {
+    width: 298px;
+    height: 345px;
   }
 }
 
@@ -27,12 +38,14 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding-left: 69px;
+    justify-content: inherit;
+    padding-left: 71px;
+    padding-top: 41px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 534px;
+    padding-left: 73px;
+    padding-top: 4px;
   }
 }
 
@@ -42,17 +55,36 @@
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
+    width: 168px;
   }
 
   @media (min-width: @desktop-width) {
     line-height: 30px;
+    width: inherit;
+    padding-top: 45px;
   }
 }
 
 .promo__text {
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 11px 0 10px 0;
+  }
+
   @media (min-width: @desktop-width) {
     font-size: 18px;
     line-height: 30px;
+    padding-top: 27px;
+    padding-bottom: 0;
+  }
+}
+
+.promo__breake {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
   }
 }
 
@@ -66,5 +98,6 @@
   @media (min-width: @desktop-width) {
     font-size: 18px;
     line-height: 30px;
+    padding-top: 31px;
   }
 }
