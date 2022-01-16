@@ -1,18 +1,56 @@
 .checkbox-fieldset {
-  border: none;
+  padding-top: 42px;
+  padding-bottom: 47px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 48px;
+    margin-top: 58px;
+    padding-bottom: 53px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 54px;
+    padding-bottom: 60px;
+  }
 }
 
 .checkbox-fieldset__list {
   margin: 0;
-  padding: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 52px;
+  padding-left: 8px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 66px;
+  }
+
 
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: minmax(250px, 270px) minmax(231px, 275px) minmax(259px, 252px);
+    column-gap: 53px;
+    row-gap: 52px;
+    padding-left: 67px;
+  }
+}
+
+.checkbox-fieldset__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 31px;
+
+  @media (min-width: @desktop-width) {
+    align-items: baseline;
+  }
+}
+
+.checkbox-fieldset__item:nth-child(even) {
+  @media (min-width: @desktop-width) {
+    order: 1;
   }
 }
 
@@ -21,10 +59,57 @@
   text-transform: uppercase;
   line-height: 18px;
   text-align: center;
+  padding-top: 39px;
+  width: 240px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    width: 438px;
+  }
 }
 
 .checkbox-fieldset__label {
   font-size: 18px;
   line-height: 30px;
   color: @dusky-blue-gray;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox-fieldset__input + label::after,
+.checkbox-fieldset__input + label::before {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.checkbox-fieldset__input + label::before {
+  left: -57px;
+  top: -2px;
+  width: 35px;
+  height: 35px;
+  border: 2px solid @whisper;
+  border-radius: 2px;
+  background: @basic-white;
+}
+
+.checkbox-fieldset__input + label::after {
+  top: 7px;
+  left: -50px;
+  width: 25px;
+  height: 25px;
+  background: url("../../../img/yes-tick.svg") no-repeat;
+  display: none;
+}
+
+.checkbox-fieldset__input:checked + label::after {
+  display: block;
+}
+
+.checkbox-fieldset__label:hover::before {
+  border-color: @dusky-blue-gray;
+}
+
+.checkbox-fieldset__label:active::before {
+  border-color: @cerise;
 }

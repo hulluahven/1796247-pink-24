@@ -14,7 +14,22 @@
   margin: 0 9px 0 10px;
 }
 
+.toggles__button:hover,
+.toggles__button:focus {
+  background-color: @dusky-blue-fog;
+}
+
+.toggles__button:active {
+  background-color: @dusky-blue-shadow;
+}
+
 .toggles__button--current {
   box-shadow: 0 0 0 3px @dusky-blue-gray;
+  background-color: @basic-white;
+}
+
+.toggles__button--current:hover,
+.toggles__button--current:focus,
+.toggles__button--current:active {
   background-color: transparent;
 }

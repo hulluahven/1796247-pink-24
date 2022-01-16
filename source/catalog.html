@@ -7,25 +7,27 @@
   <title>HTML Academy: Каталог приложения Пинк</title>
 </head>
 <body class="page__body">
-  <header class="page-header">
-    <div class="page-header__wrapper">
-    <a class="page-header__logo" href="#">
-        <img class="page-header__logo-image" src="img/pink.svg" width="74" height="23" alt="Приложение для редактирования фотографий «Pink»">
+    <header class="page-header page-header--closed">
+      <div class="page-header__wrapper">
+          <!-- блок в котором будет навигация -->
+      <a class="page-header__logo page-header__logo--catalog" href="#">
+        <img class="page-header__logo-image page-header__logo-image--simple" src="img/pink.svg" width="74" height="23" alt="Приложение для редактирования фотографий «Pink»">
+        <img class="page-header__logo-image page-header__logo-image--glasses" src="img/logotype-tablet.png" width="145" height="40" alt="Приложение для редактирования фотографий «Pink»">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
         <div class="main-nav__wrapper">
-          <!-- для центровки навигации -->
+          <!-- добавляем обёртку для будущей центровки навигации -->
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a class="main-nav__link" href="index.html" target="_blank">
+              <a class="main-nav__link" href="index.html">
                 Главная
               </a>
             </li>
             <li class="main-nav__item main-nav__item--current">
-              <a class="main-nav__link">
+              <a class="main-nav__link" href="catalog.html">
                 Фотографии
               </a>
             </li>
@@ -42,8 +44,8 @@
           </ul>
         </div>
       </nav>
-    </div>
-</header>
+      </div>
+    </header>
 <main class="catalog-main">
   <div class="page-title__wrapper">
     <h1 class="page-title page-title--catalog">Фотографии<br>пользователей</h1>
@@ -67,12 +69,13 @@
             Анна<span class="post__note">(5 минут назад)</span>
           </p>
           <p class="post__text post__text--panorama">
-            Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе,
+            Прыгать или нет? Напишите в комментарии свой совет и<br class="post__breake"> смотрите прямую трансляцию в перископе,
               задавайте свои вопросы!
           </p>
           <div class="post__likes-wrapper post__likes-wrapper--panorama">
             <!-- для позиционирования количества лайков -->
             <p class="post__likes post__likes--panorama">Нравится: 215</p>
+            <button class="post__counter" type="button">Понравилось!</button>
           </div>
         </div>
       </div>
@@ -93,6 +96,7 @@
             <div class="post__likes-wrapper">
               <!-- для позиционирования количества лайков -->
               <p class="post__likes">Нравится: 356</p>
+              <button class="post__counter" type="button">Понравилось!</button>
             </div>
           </div>
         </article>
@@ -111,6 +115,7 @@
             <div class="post__likes-wrapper">
               <!-- для позиционирования количества лайков -->
               <p class="post__likes">Нравится: 666</p>
+              <button class="post__counter" type="button">Понравилось!</button>
             </div>
           </div>
         </article>
@@ -129,6 +134,7 @@
             <div class="post__likes-wrapper">
               <!-- для позиционирования количества лайков -->
               <p class="post__likes">Нравится: 215</p>
+              <button class="post__counter" type="button">Понравилось!</button>
             </div>
           </div>
         </article>
@@ -147,6 +153,7 @@
             <div class="post__likes-wrapper">
               <!-- для позиционирования количества лайков -->
               <p class="post__likes">Нравится: 4</p>
+              <button class="post__counter" type="button">Понравилось!</button>
             </div>
           </div>
         </article>
@@ -165,6 +172,7 @@
             <div class="post__likes-wrapper">
               <!-- для позиционирования количества лайков -->
               <p class="post__likes">Нравится: 150</p>
+              <button class="post__counter" type="button">Понравилось!</button>
             </div>
           </div>
         </article>
@@ -182,7 +190,8 @@
             </p>
             <div class="post__likes-wrapper">
               <!-- для позиционирования количества лайков -->
-              <p class="post__likes">Нравится: 150</p>
+              <p class="post__likes">Нравится: 2560</p>
+              <button class="post__counter" type="button">Понравилось!</button>
             </div>
           </div>
         </article>
@@ -193,32 +202,40 @@
     <h2 class="visually-hidden">Инструмент для обработки изображений</h2>
     <div class="photo-tool__wrapper">
       <p class="photo-tool__text">Затмите их всех!<br>
-          Выкладывайте все, что накопилось в телефоне</p>
+          Выкладывайте все, что накопилось в телефоне!</p>
       <form class="photo-tool__form form-toggle" method="post" action="https://echo.htmlacademy.ru">
-        <div class="form-toggle__image-wrapper">
-          <img class="form-toggle__image" src="img/catalog/winter.jpg" width="280" height="374" alt="Фотография заснеженной лесной дороги">
+        <div class="form-toggle__container">
+          <div class="form-toggle__image-wrapper">
+            <img class="form-toggle__image" src="img/catalog/winter.jpg" width="280" height="374" alt="Фотография заснеженной лесной дороги">
+          </div>
+          <fieldset class="form-toggle__filter">
+            <legend class="visually-hidden">Редактор фото</legend>
+            <ul class="form-toggle__list">
+              <li class="form-toggle__item form-toggle__item--cut form-toggle__item--active">
+                <label class="form-toggle__label" for="cut">
+                  <span class="form-toggle__icon form-toggle__icon--cut">Обрезка</span>
+                </label>
+                <input class="form-toggle__input" id="cut" type="range" name="filter" min="0" max="100" step="1" value="85">
+              </li>
+              <li class="form-toggle__item form-toggle__item--fill">
+                <label class="form-toggle__label" for="fill">
+                  <span class="form-toggle__icon form-toggle__icon--fill">Заливка</span>
+                </label>
+                <input class="form-toggle__input" id="fill" type="range" name="filter" min="0" max="100" step="1" value="14">
+              </li>
+              <li class="form-toggle__item form-toggle__item--contrast">
+                <label class="form-toggle__label" for="contrast">
+                  <span class="form-toggle__icon form-toggle__icon--contrast">Контраст</span>
+                </label>
+                <input class="form-toggle__input" id="contrast" type="range" name="filter" min="0" max="100" step="1" value="51">
+              </li>
+            </ul>
+              <div class="form-toggle__button-wrapper">
+                <button class="form-toggle__button form-toggle__button--submit" type="submit">Запостить</button>
+                <button class="form-toggle__button form-toggle__button--reset" type="reset">Отмена</button>
+              </div>
+          </fieldset>
         </div>
-        <fieldset class="form-toggle__filter">
-          <legend class="visually-hidden">Редактор фото</legend>
-          <ul class="form-toggle__list">
-            <li class="form-toggle__item form-toggle__item--active">
-              <label class="form-toggle__label" for="cut"><span class="visually-hidden">Обрезка</span></label>
-              <input class="form-toggle__input" id="cut" type="range" name="filter" min="0" max="100" step="1" value="90">
-            </li>
-            <li class="form-toggle__item">
-              <label class="form-toggle__label" for="fill"><span class="visually-hidden">Заливка</span></label>
-              <input class="form-toggle__input" id="fill" type="range" name="filter" min="0" max="100" step="1" value="20">
-            </li>
-            <li class="form-toggle__item">
-              <label class="form-toggle__label" for="contrast"><span class="visually-hidden">Контраст</span></label>
-              <input class="form-toggle__input" id="contrast" type="range" name="filter" min="0" max="100" step="1" value="50">
-            </li>
-          </ul>
-            <div class="form-toggle__button-wrapper">
-              <button class="form-toggle__button form-toggle__button--submit" type="submit">Запостить</button>
-              <button class="form-toggle__button form-toggle__button--reset" type="reset">Отмена</button>
-            </div>
-        </fieldset>
       </form>
     </div>
   </section>
@@ -228,30 +245,64 @@
     <a class="page-footer__logo" href="#">
       <img class="page-footer__img" src="img/footer-logo.svg" width="145" height="40" alt="Приложение для редактирования фотографий «Pink»">
     </a>
-  </div>
-  <div class="page-footer__social social">
-    <ul class="social__list">
-      <li class="social__item">
-        <a class="social__link social__link--twitter" href="#">
-          <span class="visually-hidden">Мы в Твиттере</span>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--facebook" href="#">
-          <span class="visually-hidden">Мы в Фейсбуке</span>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--youtube" href="#">
-          <span class="visually-hidden">Мы на Ютубе</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="page-footer__copyright copyright">
-    <b class="copyright__text">Разработано:</b>
-    <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+    <div class="page-footer__social social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="#">
+            <span class="visually-hidden">Мы в Твиттере</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="#">
+            <span class="visually-hidden">Мы в Фейсбуке</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="#">
+            <span class="visually-hidden">Мы на Ютубе</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__copyright copyright">
+      <p class="copyright__text">Разработано</p>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">SVG</a>
+    </div>
   </div>
 </footer>
+<script>
+  const navMain = document.querySelector('.main-nav');
+  const navToggle = document.querySelector('.main-nav__toggle');
+  const pageHead = document.querySelector('.page-header');
+
+  navMain.classList.remove('main-nav--nojs');
+
+  navToggle.addEventListener('click', function() {
+    if (navMain.classList.contains('main-nav--closed')) {
+      navMain.classList.remove('main-nav--closed');
+      navMain.classList.add('main-nav--opened');
+    } else {
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--opened');
+    }
+  });
+
+  navToggle.addEventListener('click', () => {
+    if(pageHead.classList.contains('page-header--closed')) {
+      pageHead.classList.remove('page-header--closed');
+    } else {
+      pageHead.classList.add('page-header--closed');
+    }
+  });
+
+  // window.addEventListener('resize', () => {
+  //   if(window.innerWidth >= 1199){
+  //     navMain.classList.remove('main-nav--opened')
+  //     navMain.classList.add('main-nav--closed');
+  //     pageHead.classList.add('page-header--closed');
+  //   }
+  // });
+
+</script>
 </body>
 </html>

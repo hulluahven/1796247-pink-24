@@ -1,6 +1,41 @@
 .page-title__wrapper {
-  background: url("../../img/back-mobile.jpg") no-repeat center;
+  margin-top: -71px;
+  color: @basic-white;
+  font-weight: 300;
+  text-align: center;
+  background: url("../../img/back-mobile.jpg") no-repeat center top 2px;
+  background-size: 100%;
+  background-color: @blue-charcoal;
+  padding: 99px 20px 78px 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -111px;
+    padding: 178px 20px 125px 16px;
+    background: url("../../img/back-tablet.jpg") no-repeat center top 2px;
+    background-size: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    background: url("../../img/back-desktop.jpg") no-repeat center top 2px;
+    background-size: 100%;
+    padding: 172px 20px 86px 16px;
+  }
 }
+
+.page-title__wrapper--form {
+  margin-top: -116px;
+  padding: 145px 20px 44px 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -116px;
+    padding: 183px 20px 56px 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 175px 108px 88px 108px;
+  }
+}
+
 
 .page-title {
   color: @basic-white;
@@ -9,4 +44,13 @@
   font-weight: 300;
   text-align: center;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 50px;
+    line-height: 69px;
+  }
+}
+
+.page-title--catalog {
+  margin: 0 0 0 5px;
 }
