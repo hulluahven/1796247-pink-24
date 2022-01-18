@@ -7,6 +7,10 @@ const nameField = document.querySelector('#member-name');
 const mailField = document.querySelector('#member-mail');
 const failureMessage = document.querySelector('.modal-failure');
 const successMessage = document.querySelector('.modal-success');
+const modalSuccessButton = successMessage.querySelector ('.button');
+const modalFailureButton = failureMessage.querySelector ('.button');
+const valid = document.querySelectorAll('[required]');
+const validArray = Array.prototype.slice.call(valid);
 
 navMain.classList.remove('main-nav--nojs');
 navMain.classList.remove('main-nav--opened');
@@ -37,13 +41,18 @@ navToggle.addEventListener('click', () => {
   }
 });
 
+  pageForm.addEventListener('submit', (evt) => {
+    evt.preventDefault();
 
-  // pageForm.addEventListener('submit', (evt) => {
-  //   evt.preventDefault();
-  //   console.log('Отправлено')
+      if (!valid.value) {
+        let empty = validArray.find(item => item.value == '');
+        empty.focus();
+        empty.classList.add('error');
+        failureMessage.classList.add('modal-failure--show');
+      }
 
-  //   if (!surnameField.value) {
-  //     successMessage.classList.add('modal-success--show');
-  //   }
-  // });
-  //------- не работает модалка с ошибкой, доделать--
+      modalFailureButton.addEventListener('click', (evt) => {
+      failureMessage.classList.remove('modal-failure--show');
+    })
+
+  });
