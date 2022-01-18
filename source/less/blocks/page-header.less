@@ -1,9 +1,41 @@
 .page-header {
   background-color: @dusky-blue-gray;
-  padding: 23px 0 12px 0;
+  // background-color: @transparency;
+  position: relative;
+
+  @media (min-width: @desktop-width) {
+    background-color: @transparency;
+  }
+}
+
+.page-header--closed {
+  background-color: @transparency;
+  // background-color: @dusky-blue-gray;
+}
+
+.page-header__logo {
+  padding: 22px 0 13px 20px;
 
   @media (min-width: @tablet-width) {
-    padding: 43px 0 37px 0;
+    padding: 27px 0 43px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 26px 0 43px 0;
+  }
+}
+
+.page-header__logo-image--simple {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.page-header__logo-image--glasses {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inherit;
   }
 }
 

@@ -1,20 +1,57 @@
-.text-fieldset {
-  border: none;
-}
 
 .text-fieldset__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    gap: 31px;
+  }
 }
 
 .text-fieldset__list--member {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  padding-top: 28px;
+  padding-bottom: 22px;
 
   @media (min-width: @tablet-width) {
-    gap: 20px;
+    padding-top: 62px;
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 75px;
+    padding-bottom: 0;
+  }
+}
+
+.text-fieldset__list--contacts {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 20px 0 20px;
+    gap: 14px;
+    padding: 45px 38px 10px 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    padding: 42px 62px 0 38px;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.text-fieldset__item {
+  padding-bottom: 21px;
+  gap: 0;
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 22px;
   }
 }
 
@@ -27,7 +64,7 @@
     display: grid;
     grid-template-columns: min-content 1fr;
     align-items: center;
-    gap: 10px;
+    gap: 18px;
   }
 }
 
@@ -38,28 +75,103 @@
   flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: min-content 1fr;
-    align-items: center;
-    gap: 10px;
+    gap: 12px;
+    flex-direction: column-reverse;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 0;
+    width: 352px;
+  }
+}
+
+.text-fieldset__item--phone {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 18px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 59px;
+      height: 59px;
+      top: 1px;
+      right: 2px;
+      background-image: url("../img/phone.svg");
+
+      @media (min-width: @desktop-width) {
+        top: 2px;
+        right: -23px;
+      }
+    }
+  }
+}
+
+.text-fieldset__item--mail {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 59px;
+      height: 59px;
+      top: 1px;
+      right: 2px;
+      background-image: url("../img/mail.svg");
+
+      @media (min-width: @desktop-width) {
+        top: 2px;
+        right: -23px;
+      }
+    }
   }
 }
 
 .text-fieldset--member {
   margin: 0;
-  padding: 0 0 15px 0;
+  border: none;
 }
 
 .text-fieldset--contacts {
   margin: 0;
-  padding: 0 0 15px 0;
-}
+  padding: 12px 0 21px 0;
 
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin-top: 66px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 40px;
+  }
+}
 
 .text-fieldset__label {
   color: @cerise;
   text-transform: uppercase;
+  padding-left: 23px;
+  padding-bottom: 7px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    padding-bottom: 0;
+  }
 }
+
+.text-fieldset__label--phone {
+  @media (min-width: @tablet-width) {
+    padding-left: 19px;
+  }
+}
+
+.text-fieldset__label--mail {
+  @media (min-width: @tablet-width) {
+    padding-left: 19px;
+  }
+}
+
 
 .text-fieldset__input {
   font-size: 18px;
@@ -68,10 +180,53 @@
   border: 2px solid @whisper;
   border-radius: 1px;
   color: @dusky-blue-gray;
+  padding: 15px 0 14px 21px;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.text-fieldset__input:hover {
+  border-color: @dusky-blue-gray;
+}
+
+.text-fieldset__input:active,
+.text-fieldset__input:focus {
+  border-color: @cerise;
+}
+
+.text-fieldset__input--phone,
+.text-fieldset__input--mail {
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
+}
+
+.text-fieldset__title {
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    position: absolute;
+    top: -13px;
+    left: 176px;
+    width: 263px;
+    display: block;
+    background-color: @basic-white;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 36%;
+  }
 }
 
 .text-fieldset__title--hidden {
   font-size: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: inherit;
+    color: @cerise;
+    text-transform: uppercase;
+  }
 }
 
 .text-fieldset__input::placeholder {

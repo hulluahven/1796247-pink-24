@@ -1,23 +1,31 @@
 .advantages {
-  background: url("../../img/phone-smile.png") no-repeat center bottom, url("../../img/advantages-background.svg") no-repeat center;
-  // фон меняется с каждым устройством
-  min-height: 1127px;
-  // временное решение для удобного просмотра
   text-align: center;
-
-  @media (min-width: @desktop-width) {
-    background: url("../../img/advantages-background.svg") no-repeat center;
-  }
+  background-color: @white-smoke;
 }
 
 .advantages__slogan-wrapper {
-  padding: 14px 20px 20px 20px;
+  padding: 14px 20px 109px 20px;
+
+  clip-path: polygon(-4% -19%, 663% 14%, -14% 85%);
+  background-color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    padding: 42px 20px 85px 20px;
+    clip-path: polygon(-69% 3%, 663% -28%, -52% 110%);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 58px 20px 167px 20px;
+    clip-path: polygon(-46% 3%, 663% -55%, -28% 103%);
+  }
 }
 
 .advantages__slogan {
   font-size: 24px;
   line-height: 29px;
   font-weight: 300;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 40px;
@@ -30,11 +38,62 @@
   }
 }
 
+.advantages__slogan--first {
+  padding-top: 26px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 3px;
+  }
+}
+
+.advantages__slogan--second {
+  padding-top: 29px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
+}
+
+.advantages__info-container {
+  position: relative;
+}
+
 .advantages__list-wrapper {
-  padding: 0 20px 0 20px;
+  padding: 2px 20px 131px 20px;
+  background: url("../img/phone-smile-tablet.png") no-repeat center bottom;
+  background-position: 49% 427px;
+  background-size: 159px;
+
+  @media (min-width: @tablet-width) {
+    padding: 21px 20px 16px 20px;
+    background: none;
+    width: 620px;
+    margin: 0 auto;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: url("../img/phone-smile-tablet.png") no-repeat center bottom;
+      background-position: 20% 7px;
+      background-size: 264px;
+      width: 271px;
+      height: 486px;
+      bottom: 0;
+      z-index: 100;
+      left: 22px;
+    }
+  }
 
   @media (min-width: @desktop-width) {
-    padding: 0 130px 0 130px;
+    padding: 34px 130px 0 130px;
+    background: inherit;
+    background-color: @white-smoke;
+    width: inherit;
+    margin: 0;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -44,11 +103,12 @@
   list-style: none;
   display: flex;
   flex-direction: column;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     position: relative;
-    // для картинки телефона
-    padding: 98px 0 42px 310px;
+    padding: 0 0 0 50%;
+    width: 310px;
   }
 
   @media (min-width: @desktop-width) {
@@ -56,6 +116,11 @@
     position: inherit;
     padding: 0;
     justify-content: center;
+    gap: 21px;
+    padding-top: 3px;
+    width: 920px;
+    margin: 0 auto;
+    margin-top: -148px;
   }
 }
 
@@ -64,10 +129,14 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  width: 280px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     text-align: start;
     align-items: flex-start;
+    width: inherit;
+    margin: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -77,20 +146,51 @@
   }
 }
 
+.advantages__item:last-child .advantages__description {
+  padding-bottom: 186px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 25px;
+  }
+}
+
 .advantages__title {
+  margin: 0;
+  padding: 0;
   font-size: 18px;
   font-weight: 700;
 
   @media (min-width: @desktop-width) {
     font-size: 30px;
     line-height: 30px;
+    order: 1;
+    padding-top: 57px;
+    width: 236px;
   }
 }
 
 .advantages__description {
+  margin: 0;
+  padding: 12px 0 32px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 12px 0 35px 0;
+  }
+
   @media (min-width: @desktop-width) {
     font-size: 18px;
     line-height: 30px;
+    order: 2;
+    padding: 24px 30px 35px 30px;
+  }
+}
+
+.advantages__image-wrapper {
+  @media (min-width: @desktop-width) {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
   }
 }
 
@@ -99,5 +199,12 @@
 
   @media (min-width: @desktop-width) {
     display: inherit;
+    width: 300px;
+    height: 382px;
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
   }
 }

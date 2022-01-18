@@ -1,11 +1,131 @@
 .modal-failure {
-  text-align: center;
-  padding: 0 20px 0 20px;
   display: none;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 120px;
+    bottom: auto;
+    width: 780px;
+    height: 377px;
+  }
+}
+
+.modal-failure__container {
+  position: fixed;
+  right: 0;
+  bottom: 13vh;
+  left: 0;
+  margin: 0 auto;
+  box-shadow: @modal-shadow;
+  padding: 0;
+  z-index: 100;
+  border-radius: 5px;
+  background-color: @basic-white;
+  width: 320px;
+
+  @media (min-width: @tablet-width) {
+    width: 460px;
+    height: 362px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 780px;
+    height: 377px;
+    bottom: 15vh;
+  }
+}
+
+.modal-failure__text-wrapper {
+  padding-top: 37px;
+  width: 280px;
+  margin: 0 auto;
+
+
+  @media (min-width: @tablet-width) {
+    padding-top: 42px;
+    width: 384px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 450px;
+  }
 }
 
 .modal-failure__title {
   font-size: 18px;
   line-height: 24px;
   color: @basic-black;
+  margin: 0;
+  padding: 0 40px 0 40px;
+
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+    padding: 0 83px 0 83px;
+    text-align: center;
+  }
+
+
+  @media (min-width: @desktop-width) {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+    padding: 0 40px 0 40px;
+  }
+}
+
+.modal-failure__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  color: @basic-black;
+  padding: 25px 0 0 0;
+  text-align: center;
+
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    padding: 22px 32px 0 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 21px 20px 0 20px;
+  }
+}
+
+.modal-failure__button-wrapper {
+  background-color: @white-smoke;
+  padding: 41px 20px 50px 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    padding: 31px 0 51px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 61px;
+    padding-top: 49px;
+    padding-bottom: 50px;
+  }
+}
+
+.modal-failure .button {
+  border-radius: 2px;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    padding-right: 3px;
+    margin-left: 81px;
+    margin-top: 2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 239px;
+  }
 }

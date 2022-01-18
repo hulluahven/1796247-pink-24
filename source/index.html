@@ -12,9 +12,10 @@
       <div class="page-header__wrapper">
           <!-- блок в котором будет навигация -->
       <a class="page-header__logo" href="#">
-        <img class="page-header__logo-image" src="img/pink.svg" width="74" height="23" alt="Приложение для редактирования фотографий «Pink»">
+        <img class="page-header__logo-image page-header__logo-image--simple" src="img/pink.svg" width="74" height="23" alt="Приложение для редактирования фотографий «Pink»">
+        <img class="page-header__logo-image page-header__logo-image--glasses" src="img/logotype-tablet.png" width="145" height="40" alt="Приложение для редактирования фотографий «Pink»">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
@@ -81,39 +82,48 @@
           Преимущества приложения «Pink».
         </h2>
         <div class="advantages__slogan-wrapper">
-          <p class="advantages__slogan">Устали от серости мегаполиса?</p>
-        <p class="advantages__slogan">Нам есть, что вам предложить!</p>
+          <p class="advantages__slogan advantages__slogan--first">Устали от серости мегаполиса?</p>
+        <p class="advantages__slogan advantages__slogan--second">Нам есть, что вам<br>предложить!</p>
         </div>
+        <div class="advantages__info-container">
         <div class="advantages__list-wrapper">
           <ul class="advantages__list">
             <li class="advantages__item">
               <h3 class="advantages__title">Поднимает настроение</h3>
               <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-              <img class="advantages__image" src="img/phone-gray.png" width="186" height="382" alt="Телефон с серым экраном">
+              <div class="advantages__image-wrapper">
+                <img class="advantages__image" src="img/phone-gray.png" width="186" height="382" alt="Телефон с серым экраном">
+              </div>
             </li>
             <li class="advantages__item">
               <h3 class="advantages__title">Меняет мир вокруг</h3>
-              <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-              <img class="advantages__image" src="img/phone-pink.png" width="186" height="382" alt="Телефон с розовым экраном">
+              <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbspэффект</p>
+              <div class="advantages__image-wrapper">
+                <img class="advantages__image" src="img/phone-pink.png" width="186" height="382" alt="Телефон с розовым экраном">
+              </div>
             </li>
             <li class="advantages__item">
               <h3 class="advantages__title">Заводит новых друзей</h3>
-              <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите ноавых</p>
-              <img class="advantages__image" src="img/phone-smile.png" width="186" height="382" alt="Телефон с розовым экраном и смайликом">
+              <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+              <div class="advantages__image-wrapper">
+                <img class="advantages__image" src="img/phone-smile.png" width="186" height="382" alt="Телефон с розовым экраном и смайликом">
+              </div>
             </li>
+
           </ul>
+        </div>
         </div>
       </div>
     </section>
     <section class="promo">
       <div class="promo__wrapper">
-      <img class="promo__logo" src="img/breguet.png" width="238" height="276" alt="Циферблат с обозначением «24 часа»">
+          <img class="promo__logo" src="img/breguet.png" width="238" height="276" alt="Циферблат с обозначением «24 часа»">
         <div class="promo__content-wrapper">
           <h2 class="promo__title">
-            Эффект на 24 часа!
+            Эффект на&nbsp;24 часа!
           </h2>
           <p class="promo__text">
-            Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки
+            Британские ученые провели исследования и&nbsp;доказали,<br class="promo__breake"> что положительный эффект от&nbsp;использования приложения длится целые&nbsp;сутки!
           </p>
           <a class="promo__link" href="#">Узнать больше об исследовании</a>
         </div>
@@ -124,7 +134,7 @@
         <!-- Миксуем слайдер и комментарии, кроме того это будет отвечать за позиционироание -->
         <h2 class="visually-hidden">Отзывы пользователей приложения</h2>
         <div class="reviews__list slider__list">
-          <blockquote class="reviews__item slider__item">
+          <blockquote class="reviews__item slider__item slider__item--current">
             <div class="reviews__author-info">
               <p class="reviews__text">
                 «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
@@ -135,8 +145,8 @@
             </div>
           </blockquote>
           <!-- Переключатели на десктопе -->
-          <button class="reviews__previous" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
-          <button class="reviews__next" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
+          <button class="slider__back" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
+          <button class="slider__next" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
         </div>
         <p class="reviews__toggles toggles">
           <button class="toggles__button toggles__button--current" type="button">1</button>
@@ -168,22 +178,55 @@
               </th>
             </tr>
             <tr class="table__content">
-              <td class="table__feature table__feature--pink"><span class="table__point">Розовый фильтр</span></td>
-              <td class="table__feature table__feature--added"><span class="visually-hidden">Включено</span></td>
-              <td class="table__feature table__feature--added"><span class="visually-hidden">Включено</span></td>
-              <td class="table__feature table__feature--added"><span class="visually-hidden">Включено</span></td>
+              <td class="table__feature table__feature--pink">
+                <span class="table__point">Розовый фильтр</span>
+              </td>
+              <td class="table__feature">
+                <span class="table__point table__point--option">Розовый фильтр</span>
+                <span class="table__indicator table__indicator--added">Включено</span>
+              </td>
+              <td class="table__feature">
+                <span class="table__point table__point--option">Розовый фильтр</span>
+                <span class="table__indicator table__indicator--added">Включено</span>
+              </td>
+              <td class="table__feature">
+                <span class="table__point table__point--option">Розовый фильтр</span>
+                <span class="table__indicator table__indicator--added">Включено</span>
+              </td>
             </tr>
             <tr class="table__content">
-              <td class="table__feature table__feature--smile"><span class="table__point">Смайлики</span></td>
-              <td class="table__feature table__feature--none"><span class="visually-hidden">Отсутствует</span></td>
-              <td class="table__feature table__feature--added"><span class="visually-hidden">Включено</span></td>
-              <td class="table__feature table__feature--added"><span class="visually-hidden">Включено</span></td>
+              <td class="table__feature table__feature--smile">
+                <span class="table__point">Смайлики</span>
+              </td>
+              <td class="table__feature">
+                <span class="table__point table__point--option">Смайлики</span>
+                <span class="table__indicator table__indicator--none">Отсутствует</span>
+              </td>
+              <td class="table__feature">
+                <span class="table__point table__point--option">Смайлики</span>
+                <span class="table__indicator table__indicator--added">Включено</span>
+              </td>
+              <td class="table__feature">
+                <span class="table__point table__point--option">Смайлики</span>
+                <span class="table__indicator table__indicator--added">Включено</span>
+              </td>
             </tr>
             <tr class="table__content">
-              <td class="table__feature table__feature--comment"><span class="table__point">Комментарии</span></td>
-              <td class="table__feature table__feature--none"><span class="visually-hidden">Отсутствует</span></td>
-              <td class="table__feature table__feature--none"><span class="visually-hidden">Отсутствует</span></td>
-              <td class="table__feature table__feature--added"><span class="visually-hidden">Включено</span></td>
+              <td class="table__feature table__feature--comment">
+                <span class="table__point">Комментарии</span>
+              </td>
+              <td class="table__feature">
+                <span class="table__point table__point--option">Комментарии</span>
+                <span class="table__indicator table__indicator--none">Отсутствует</span>
+              </td>
+              <td class="table__feature">
+                <span class="table__point table__point--option">Комментарии</span>
+                <span class="table__indicator table__indicator--none">Отсутствует</span>
+              </td>
+              <td class="table__feature">
+                <span class="table__point table__point--option">Комментарии</span>
+                <span class="table__indicator table__indicator--added">Включено</span>
+              </td>
             </tr>
           </table>
         </div>
@@ -198,7 +241,7 @@
       <div class="contacts__wrapper">
         <h2 class="contacts__title">Остались вопросы? Свяжитесь с нами!</h2>
         <ul class="contacts__list">
-          <li class="contacts__item">
+          <li class="contacts__item contacts__item--phone">
             <p class="contacts__text">Звоните:</p>
             <p class="contacts__phone">
               <a class="contacts__link" href="tel:+78125556666">
@@ -207,7 +250,7 @@
               </a>
             </p>
           </li>
-          <li class="contacts__item">
+          <li class="contacts__item contacts__item--mail">
             <p class="contacts__text">Пишите:</p>
             <p class="contacts__mail">
               <a class="contacts__link" href="malto:mail@htmlacademy.ru">
@@ -216,11 +259,11 @@
               </a>
             </p>
           </li>
-          <li class="contacts__item">
+          <li class="contacts__item contacts__item--address">
             <p class="contacts__text">Приезжайте в гости:</p>
             <p class="contacts__address">
               <a class="contacts__link" href="#">
-                <span class="contacts__address-name">ул. Большая Конюшенная, 19/8</span>
+                <span class="contacts__address-name">ул. Большая<br>Конюшенная, 19/8</span>
               </a>
             </p>
           </li>
@@ -239,30 +282,31 @@
       <a class="page-footer__logo" href="#">
         <img class="page-footer__img" src="img/footer-logo.svg" width="145" height="40" alt="Приложение для редактирования фотографий «Pink»">
       </a>
-    </div>
-    <div class="page-footer__social social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--twitter" href="#">
-            <span class="visually-hidden">Мы в Твиттере</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--facebook" href="#">
-            <span class="visually-hidden">Мы в Фейсбуке</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube" href="#">
-            <span class="visually-hidden">Мы на Ютубе</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="page-footer__copyright copyright">
-      <b class="copyright__text">Разработано:</b>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="#">
+              <span class="visually-hidden">Мы в Твиттере</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#">
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="#">
+              <span class="visually-hidden">Мы на Ютубе</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">SVG</a>
+      </div>
     </div>
   </footer>
+  <script src="./js/main.js"></script>
   </body>
 </html>
