@@ -1,13 +1,45 @@
 .copyright__text {
   line-height: 18px;
-  padding: 3px 0 0 10px;
+  padding: 9px 0 0 10px;
   margin: 0;
 
   @media (min-width: @tablet-width) {
-    padding: 4px 0 0 16px;
+    padding: 11px 0 0 16px;
   }
 
   @media (min-width: @desktop-width) {
     font-size: 18px;
+    padding: 10px 0 0 16px;
   }
+}
+
+.copyright__link {
+  width: 35px;
+  height: 35px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.copyright__logo {
+  fill: @cerise;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 5px;
+    padding-right: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 3px;
+    padding-right: 2px;
+  }
+}
+
+.copyright__logo:hover,
+.copyright__logo:focus {
+  fill: @dusky-blue-gray;
+}
+
+.copyright__logo:active {
+  fill: @dusky-blue-smoke;
 }

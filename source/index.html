@@ -7,10 +7,8 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body class="page__body">
-        <!-- body как элемент страницы -->
     <header class="page-header">
       <div class="page-header__wrapper">
-          <!-- блок в котором будет навигация -->
       <a class="page-header__logo" href="#">
         <img class="page-header__logo-image page-header__logo-image--simple" src="img/pink.svg" width="74" height="23" alt="Приложение для редактирования фотографий «Pink»">
         <img class="page-header__logo-image page-header__logo-image--glasses" src="img/logotype-tablet.png" width="145" height="40" alt="Приложение для редактирования фотографий «Pink»">
@@ -20,10 +18,9 @@
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
         <div class="main-nav__wrapper">
-          <!-- добавляем обёртку для будущей центровки навигации -->
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--current">
-              <a class="main-nav__link">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">
                 Главная
               </a>
             </li>
@@ -131,7 +128,6 @@
     </section>
     <section class="reviews">
       <div class="reviews__wrapper slider">
-        <!-- Миксуем слайдер и комментарии, кроме того это будет отвечать за позиционироание -->
         <h2 class="visually-hidden">Отзывы пользователей приложения</h2>
         <div class="reviews__list slider__list">
           <blockquote class="reviews__item slider__item slider__item--current">
@@ -144,7 +140,6 @@
               <p class="reviews__author-data">25 лет, водитель трамвая</p>
             </div>
           </blockquote>
-          <!-- Переключатели на десктопе -->
           <button class="slider__back" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
           <button class="slider__next" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
         </div>
@@ -157,7 +152,6 @@
     </section>
     <section class="tariffs">
       <div class="tariffs__wrapper">
-        <!-- для центровки -->
         <div class="tariffs__slider slider">
           <h2 class="visually-hidden">Наши тарифы</h2>
           <table class="tariffs__table table">
@@ -168,7 +162,6 @@
                 <span class="table__price">1,99 USD</span>
               </th>
               <th class="table__header table__header--promotion">
-                <!-- Здесь нужно приклеить ярлык с акцией -->
                 <span class="table__name">Стандарт</span>
                 <span class="table__price">3,99 USD</span>
               </th>
@@ -272,7 +265,6 @@
       <div class="contacts__map">
         <iframe class="contacts__google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.6507330280282!2d30.322602829268014!3d59.93873067066122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x93854e2820c04f4e!2zNTnCsDU2JzE5LjQiTiAzMMKwMTknMjMuMyJF!5e0!3m2!1sru!2sru!4v1638614358035!5m2!1sru!2sru"
         allowfullscreen="" loading="lazy"></iframe>
-        <!-- добавить leaflet -->
     </div>
       </div>
     </section>
@@ -303,10 +295,14 @@
       </div>
       <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">SVG</a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <svg class="copyright__logo" width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" />
+            </svg>
+        </a>
       </div>
     </div>
   </footer>
-  <script src="./js/main.js"></script>
+  <script src="js/main.js"></script>
   </body>
 </html>

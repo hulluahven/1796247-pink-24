@@ -7,23 +7,35 @@ const nameField = document.querySelector('#member-name');
 const mailField = document.querySelector('#member-mail');
 const failureMessage = document.querySelector('.modal-failure');
 const successMessage = document.querySelector('.modal-success');
+const modalFailureButton =  document.querySelector('.modal-failure__button');
+const modalSucessButton = document.querySelector ('.modal-success__button');
+const valid = document.querySelectorAll('[required]');
+const validArray = Array.prototype.slice.call(valid);
+
+
 
 navMain.classList.remove('main-nav--nojs');
-navMain.classList.remove('main-nav--opened');
-navMain.classList.add('main-nav--closed');
 
 if (pageHeader.classList.contains('page-header--closed')) {
   pageHeader.classList.remove('page-header--closed');
 }
 else {
   pageHeader.classList.add('page-header--closed');
-}
+};
+
+
+if (navMain.classList.contains('main-nav--opened')) {
+  navMain.classList.remove('main-nav--opened');
+  navMain.classList.add('main-nav--closed');
+};
+
 
 navToggle.addEventListener('click', function() {
   if (navMain.classList.contains('main-nav--closed')) {
     navMain.classList.remove('main-nav--closed');
     navMain.classList.add('main-nav--opened');
-  } else {
+  }
+  else {
     navMain.classList.add('main-nav--closed');
     navMain.classList.remove('main-nav--opened');
   }
@@ -32,18 +44,33 @@ navToggle.addEventListener('click', function() {
 navToggle.addEventListener('click', () => {
   if(pageHeader.classList.contains('page-header--closed')) {
     pageHeader.classList.remove('page-header--closed');
-  } else {
+  }
+  else {
     pageHeader.classList.add('page-header--closed');
   }
 });
 
+  pageForm.addEventListener('submit', (evt) => {
+    // evt.preventDefault();
 
-  // pageForm.addEventListener('submit', (evt) => {
-  //   evt.preventDefault();
-  //   console.log('Отправлено')
+      if (!valid.value) {
+        evt.preventDefault();
+        let empty = validArray.find(item => item.value == '');
+        empty.focus();
+        empty.classList.add('error');
+        failureMessage.classList.add('modal-failure--show');
+      }
 
-  //   if (!surnameField.value) {
-  //     successMessage.classList.add('modal-success--show');
-  //   }
+      // else {
+      //   successMessage.classList.add('modal-success--show');
+      // }
+
+  });
+
+  modalFailureButton.addEventListener('click', (evt) => {
+    failureMessage.classList.remove('modal-failure--show');
+  });
+
+  // successMessage.addEventListener('click', (evt) => {
+  //   successMessage.classList.remove('modal-success--show');
   // });
-  //------- не работает модалка с ошибкой, доделать--
