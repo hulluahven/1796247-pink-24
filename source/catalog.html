@@ -3,8 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/style.css" rel="stylesheet">
   <title>HTML Academy: Каталог приложения Пинк</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/152.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page__body">
     <header class="page-header">
@@ -56,7 +60,11 @@
       <article class="catalog__item-panorama post">
       <h3 class="visually-hidden">Пост - панорама дня</h3>
       <a class="post__link-panorama" href="#">
-        <img class="post__image-panorama" src="img/catalog/panorama.jpg" width="320" height="137" alt="Панорамный вид на гористую местность">
+       <picture>
+        <source media="(min-width:1200px)" srcset="img/catalog/panorama-desktop.jpg 1x,img/catalog/panorama-desktop@2x.jpg 2x">
+         <source media="(min-width:660px)" srcset="img/catalog/panorama-tablet.jpg 1x,img/catalog/panorama-tablet@2x.jpg 2x">
+        <img class="post__image-panorama" src="img/catalog/panorama.jpg" width="320" height="137" srcset="img/catalog/panorama@2x.jpg 2x" alt="Панорамный вид на гористую местность">
+       </picture>
       </a>
       <div class="post__container-panorama">
         <div class="post__wrapper post__wrapper--panorama">
@@ -78,7 +86,11 @@
         <article class="catalog__item post">
           <h3 class="visually-hidden">Пост пользователя</h3>
           <a class="post-link" href="#">
-            <img class="post__image" src="img/catalog/skoda.jpg" width="280" height="180" alt="Фото белого автомобиля «Skoda» на фоне черной стены">
+          <picture>
+            <source media="(min-width:1200px)" srcset="img/catalog/skoda-desktop.jpg 1x, img/catalog/skoda-desktop@2x.jpg 2x">
+            <source media="(min-width:660px)" srcset="img/catalog/skoda-tablet.jpg 1x, img/catalog/skoda-tablet@2x.jpg 2x">
+            <img class="post__image" src="img/catalog/skoda.jpg" width="280" height="180" srcset="img/catalog/skoda@2x.jpg 2x" alt="Фото белого автомобиля «Skoda» на фоне черной стены">
+          </picture>
           </a>
           <div class="post__wrapper">
             <p class="post__author">
@@ -96,7 +108,11 @@
         <article class="catalog__item post">
           <h3 class="visually-hidden">Пост пользователя</h3>
           <a class="post-link" href="#">
-            <img class="post__image" src="img/catalog/drums.jpg" width="280" height="180" alt="Фото барабанной установки">
+            <picture>
+              <source media="(min-width:1200px)" srcset="img/catalog/drums-desktop.jpg 1x, img/catalog/drums-desktop@2x.jpg 2x">
+              <source media="(min-width:660px)" srcset="img/catalog/drums-tablet.jpg 1x, img/catalog/drums-tablet@2x.jpg 2x">
+              <img class="post__image" src="img/catalog/drums.jpg" width="280" height="180" srcset="img/catalog/drums@2x.jpg 2x" alt="Фото барабанной установки">
+            </picture>
           </a>
           <div class="post__wrapper">
             <p class="post__author">
@@ -114,7 +130,11 @@
         <article class="catalog__item post">
           <h3 class="visually-hidden">Пост пользователя</h3>
           <a class="post__link" href="#">
-            <img class="post__image" src="img/catalog/window-wall.jpg" width="280" height="180" alt="Фото облаков через панорамное окно">
+            <picture>
+              <source media="(min-width:1200px)" srcset="img/catalog/window-wall-desktop.jpg 1x, img/catalog/window-wall-desktop@2x.jpg 2x">
+              <source media="(min-width:660px)" srcset="img/catalog/window-wall-tablet.jpg 1x, img/catalog/window-wall-tablet@2x.jpg 2x">
+              <img class="post__image" src="img/catalog/window-wall.jpg" width="280" height="180" srcset="img/catalog/window-wall@2x.jpg 2x" alt="Фото облаков через панорамное окно">
+            </picture>
           </a>
           <div class="post__wrapper">
             <p class="post__author">
@@ -132,7 +152,11 @@
         <article class="catalog__item post">
           <h3 class="visually-hidden">Пост пользователя</h3>
           <a class="post__link" href="#">
-            <img class="post__image" src="img/catalog/tent.jpg" width="280" height="180" alt="Фото мини-ярмарки арбузов и дынь">
+            <picture>
+              <source media="(min-width:1200px)" srcset="img/catalog/tent-desktop.jpg 1x, img/catalog/tent-desktop@2x.jpg 2x">
+              <source media="(min-width:660px)" srcset="img/catalog/tent-tablet.jpg 1x, img/catalog/tent-tablet@2x.jpg 2x">
+              <img class="post__image" src="img/catalog/tent.jpg" width="280" height="180" srcset="img/catalog/tent@2x.jpg 2x" alt="Фото мини-ярмарки арбузов и дынь">
+            </picture>
           </a>
           <div class="post__wrapper">
             <p class="post__author">
@@ -150,7 +174,11 @@
         <article class="catalog__item post">
           <h3 class="visually-hidden">Пост пользователя</h3>
           <a class="post__link" href="#">
-            <img class="post__image" src="img/catalog/legs-rock.jpg" width="280" height="180" alt="Фото с ногами пользователя, сидящего на скале">
+            <picture>
+              <source media="(min-width:1200px)" srcset="img/catalog/legs-rock-desktop.jpg 1x, img/catalog/legs-rock-desktop@2x.jpg 2x">
+              <source media="(min-width:660px)" srcset="img/catalog/legs-rock-tablet.jpg 1x, img/catalog/legs-rock-tablet@2x.jpg 2x">
+              <img class="post__image" src="img/catalog/legs-rock.jpg" width="280" height="180" srcset="img/catalog/legs-rock@2x.jpg 2x" alt="Фото с ногами пользователя, сидящего на скале">
+            </picture>
           </a>
           <div class="post__wrapper">
             <p class="post__author">
@@ -168,7 +196,11 @@
         <article class="catalog__item post">
           <h3 class="visually-hidden">Пост пользователя</h3>
           <a class="post__link" href="#">
-            <img class="post__image" src="img/catalog/plane-wing.jpg" width="280" height="180" alt="Фото крыла самолета, на фоне заката">
+            <picture>
+              <source media="(min-width:1200px)" srcset="img/catalog/plane-wing-desktop.jpg 1x, img/catalog/plane-wing-desktop@2x.jpg 2x">
+              <source media="(min-width:660px)" srcset="img/catalog/plane-wing-tablet.jpg 1x, img/catalog/plane-wing-tablet@2x.jpg 2x">
+              <img class="post__image" src="img/catalog/plane-wing.jpg" width="280" height="180" srcset="img/catalog/plane-wing@2x.jpg 2x" alt="Фото крыла самолета, на фоне заката">
+            </picture>
           </a>
           <div class="post__wrapper">
             <p class="post__author">
@@ -194,7 +226,11 @@
       <form class="photo-tool__form form-toggle" method="post" action="https://echo.htmlacademy.ru">
         <div class="form-toggle__container">
           <div class="form-toggle__image-wrapper">
-            <img class="form-toggle__image" src="img/catalog/winter.jpg" width="280" height="374" alt="Фотография заснеженной лесной дороги">
+            <picture>
+              <source media="(min-width:1200px)" srcset="img/catalog/winter-desktop.jpg 1x, img/catalog/winter-desktop@2x.jpg 2x">
+              <source media="(min-width:660px)" srcset="img/catalog/winter-tablet.jpg 1x, img/catalog/winter-tablet@2x.jpg 2x">
+              <img class="form-toggle__image" src="img/catalog/winter.jpg" width="280" height="374" srcset="img/catalog/winter@2x.jpg 2x" alt="Фотография заснеженной лесной дороги">
+            </picture>
           </div>
           <fieldset class="form-toggle__filter">
             <legend class="visually-hidden">Редактор фото</legend>
