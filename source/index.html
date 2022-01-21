@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Пинк</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/152.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -85,25 +90,33 @@
         <div class="advantages__info-container">
         <div class="advantages__list-wrapper">
           <ul class="advantages__list">
-            <li class="advantages__item">
+            <li class="advantages__item advantages__item--mood">
               <h3 class="advantages__title">Поднимает настроение</h3>
               <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
               <div class="advantages__image-wrapper">
-                <img class="advantages__image" src="img/phone-gray.png" width="186" height="382" alt="Телефон с серым экраном">
+                <picture>
+                  <img class="advantages__image advantages__image--gray" src="img/phone-gray.png" width="186" height="382" srcset="img/phone-gray@2x.png 2x" alt="Телефон с серым экраном">
+                </picture>
               </div>
             </li>
-            <li class="advantages__item">
+            <li class="advantages__item advantages__item--world">
               <h3 class="advantages__title">Меняет мир вокруг</h3>
               <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbspэффект</p>
               <div class="advantages__image-wrapper">
-                <img class="advantages__image" src="img/phone-pink.png" width="186" height="382" alt="Телефон с розовым экраном">
+              <picture>
+                <img class="advantages__image advantages__image--pink" src="img/phone-pink.png" width="186" height="382" srcset="img/phone-pink@2x.png 2x" alt="Телефон с розовым экраном">
+              </picture>
               </div>
             </li>
-            <li class="advantages__item">
+            <li class="advantages__item advantages__item--friends">
               <h3 class="advantages__title">Заводит новых друзей</h3>
               <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
               <div class="advantages__image-wrapper">
-                <img class="advantages__image" src="img/phone-smile.png" width="186" height="382" alt="Телефон с розовым экраном и смайликом">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/phone-smile.png 1x, img/phone-smile@2x.png 2x">
+                <source media="(min-width: 660px)" srcset="img/phone-smile-tablet.png 1x, img/phone-smile-tablet@2x.png 2x">
+                <img class="advantages__image advantages__image--smile" src="img/phone-smile.png" width="186" height="382" srcset="img/phone-smile@2x.png 2x" alt="Телефон с розовым экраном и смайликом">
+              </picture>
               </div>
             </li>
 
@@ -114,7 +127,6 @@
     </section>
     <section class="promo">
       <div class="promo__wrapper">
-          <img class="promo__logo" src="img/breguet.png" width="238" height="276" alt="Циферблат с обозначением «24 часа»">
         <div class="promo__content-wrapper">
           <h2 class="promo__title">
             Эффект на&nbsp;24 часа!
