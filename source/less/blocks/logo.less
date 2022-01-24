@@ -1,0 +1,104 @@
+
+.logo--header:hover use {
+  fill: @cerise;
+}
+
+.logo--header:focus use {
+  fill: @cerise;
+}
+
+.logo--header:active use {
+  fill: @basic-white;
+  opacity: 0.3;
+}
+
+.logo__glasses {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+    fill: @basic-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.logo__text {
+  fill: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 3px 0 8px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.logo__stars {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+    fill: @basic-white;
+  }
+}
+
+.logo--footer .logo__glasses {
+  display: inline;
+  fill: @cerise;
+  padding: 0 8px 0 0;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+    padding: 0 0 0 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.logo--footer .logo__text {
+  fill: @dusky-blue-gray;
+
+  @media (min-width: @tablet-width) {
+    fill: @dusky-blue-gray;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.logo--footer .logo__text:hover {
+  fill: @cerise;
+}
+
+.logo--footer:focus use {
+  fill: @cerise;
+}
+
+.logo--footer:active {
+  opacity: 0.3;
+}
+
+.logo__constellation {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+    fill: @dusky-blue-gray;
+  }
+}
+
+.logo__constellation:hover {
+  fill: @cerise;
+}
+
+.logo__constellation:focus,
+.logo__constellation:active {
+  opacity: 0.3;
+}

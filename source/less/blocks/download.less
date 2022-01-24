@@ -3,10 +3,10 @@
   color: @basic-white;
   font-weight: 300;
   text-align: center;
-  background: url("../img/ihand-mobile.png") no-repeat center top 182px, url("../img/back-mobile.png") no-repeat center bottom 268px;
+  background: url("../img/ihand-mobile.png") no-repeat center top 182px, url("../img/back-mobile.png") no-repeat center bottom 272px;
   background-size: auto, 100%;
   background-color: @blue-charcoal;
-  padding: 23px 20px 30px 16px;
+  padding: 24px 20px 29px 16px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/ihand-mobile@2x.png"), url("../img/back-mobile@2x.png");
@@ -16,25 +16,25 @@
   @media (min-width: @tablet-width) {
     margin-top: -112px;
     padding-top: 94px;
-    padding-bottom: 102px;
+    padding-bottom: 103px;
     background: url("../img/ihand-tablet.png") no-repeat bottom, url("../img/back-tablet.png") no-repeat center top 0;
     background-size: 660px, cover;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/ihad-tablet@2x.png"), url("../img/back-tablet@2x.png");
-      background-size: 660px, 101%;
+      background-size: 660px, cover;
     }
   }
 
   @media (min-width: @desktop-width) {
-    padding: 97px 102px 115px;
+    padding: 100px 96px 107px;
     background: url("../img/ihand-desktop.png") no-repeat bottom, url("../img/back-desktop.png") no-repeat center top;
     background-size: 1052px, 101%;
     background-position: 98% 100%, 100%;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/ihand-desktop@2x.png"), url("../img/back-desktop@2x.png");
-      background-size: 1052px, 101%;
+      background-size: 1052px, cover;
     }
   }
 }
@@ -80,28 +80,61 @@
     font-size: 50px;
     line-height: 69px;
     padding-left: 4px;
-    padding-top: 2px;
+    padding-top: 0;
   }
 }
 
 .download__list {
   margin: 0;
-  padding-left: 6px;
+  padding-left: 0;
   list-style: none;
-  margin-top: 34px;
+  margin-top: 25px;
   display: flex;
   width: 230px;
   justify-content: center;
-  gap: 35px;
+  gap: 23px;
   align-items: center;
 
   @media (min-width: @tablet-width) {
-    margin-top: 46px;
+    margin-top: 39px;
     margin-right: 4px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 67px;
+    gap: 19px;
+    margin-top: 61px;
+  }
+}
+
+.download__icon--microsoft {
+  padding: 12px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 8px 0 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 11px 0 0 9px;
+  }
+}
+
+.download__icon--android {
+  padding: 6px 12px 0 12px;
+
+  @media (min-width: @desktop-width) {
+    padding: 11px 9px 0 13px;
+  }
+}
+
+.download__icon--apple {
+  padding: 3px 0 0 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 6px 0 0 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 5px 0 0 3px;
   }
 }
 
@@ -114,7 +147,7 @@
   font-size: 18px;
   line-height: 18px;
   text-align: center;
-  margin-top: 343px;
+  margin-top: 342px;
   padding: 16px 0;
 
   @media (min-width: @tablet-width) {
@@ -123,7 +156,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 36px;
+    margin-top: 33px;
     font-size: 21px;
     line-height: 18px;
   }
@@ -154,6 +187,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 42px 0 12px 0;
+    padding: 45px 0 16px 0;
   }
 }
