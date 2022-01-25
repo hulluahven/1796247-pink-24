@@ -13,9 +13,16 @@
 <body class="page__body">
     <header class="page-header">
       <div class="page-header__wrapper">
-      <a class="page-header__logo page-header__logo--catalog" href="#">
-        <img class="page-header__logo-image page-header__logo-image--simple" src="img/pink.svg" width="74" height="23" alt="Приложение для редактирования фотографий «Pink»">
-        <img class="page-header__logo-image page-header__logo-image--glasses" src="img/logotype-tablet.png" width="145" height="40" alt="Приложение для редактирования фотографий «Pink»">
+      <a class="page-header__logo logo logo--header" href="#">
+        <svg class="logo__glasses" role="img" width="59" height="40">
+          <use xlink:href="img/sprite.svg#logo-glasses"></use>
+        </svg>
+        <svg class="logo__text" role="img" width="74" height="23">
+          <use xlink:href="img/sprite.svg#logo-text"></use>
+        </svg>
+        <svg class="logo__stars" role="img" width="156" height="40">
+          <use xlink:href="img/sprite.svg#logo-stars"></use>
+        </svg>
       </a>
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button">
@@ -61,8 +68,11 @@
       <h3 class="visually-hidden">Пост - панорама дня</h3>
       <a class="post__link-panorama" href="#">
       <picture>
-        <source media="(min-width:1200px)" srcset="img/catalog/panorama-desktop.jpg 1x,img/catalog/panorama-desktop@2x.jpg 2x">
-        <source media="(min-width:660px)" srcset="img/catalog/panorama-tablet.jpg 1x,img/catalog/panorama-tablet@2x.jpg 2x">
+        <source type="image/webp" media="(min-width:1200px)" srcset="img/catalog/panorama-desktop.webp 1x, img/catalog/panorama-desktop@2x.webp 2x">
+        <source type="image/webp" media="(min-width:660px)" srcset="img/catalog/panorama-tablet.webp 1x, img/catalog/panorama-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/catalog/panorama.webp 1x, img/catalog/panorama@2x.webp 2x">
+        <source media="(min-width:1200px)" srcset="img/catalog/panorama-desktop.jpg 1x, img/catalog/panorama-desktop@2x.jpg 2x">
+        <source media="(min-width:660px)" srcset="img/catalog/panorama-tablet.jpg 1x, img/catalog/panorama-tablet@2x.jpg 2x">
         <img class="post__image-panorama" src="img/catalog/panorama.jpg" width="320" height="137" srcset="img/catalog/panorama@2x.jpg 2x" alt="Панорамный вид на гористую местность">
       </picture>
       </a>
@@ -87,6 +97,9 @@
           <h3 class="visually-hidden">Пост пользователя</h3>
           <a class="post-link" href="#">
           <picture>
+            <source type="image/webp" media="(min-width:1200px)" srcset="img/catalog/skoda-desktop.webp 1x, img/catalog/skoda-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width:660px)" srcset="img/catalog/skoda-tablet.webp 1x, img/catalog/skoda-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/catalog/skoda.webp 1x, img/catalog/skoda@2x.webp 2x">
             <source media="(min-width:1200px)" srcset="img/catalog/skoda-desktop.jpg 1x, img/catalog/skoda-desktop@2x.jpg 2x">
             <source media="(min-width:660px)" srcset="img/catalog/skoda-tablet.jpg 1x, img/catalog/skoda-tablet@2x.jpg 2x">
             <img class="post__image" src="img/catalog/skoda.jpg" width="280" height="180" srcset="img/catalog/skoda@2x.jpg 2x" alt="Фото белого автомобиля «Skoda» на фоне черной стены">
@@ -207,7 +220,7 @@
               Надежда<span class="post__note">(45 часов назад)</span>
             </p>
             <p class="post__text">
-              Всем GM и взаимные лайки
+              Всем GM и взаимные лайки!
             </p>
             <div class="post__likes-wrapper">
               <p class="post__likes">Нравится: 2560</p>
@@ -237,19 +250,28 @@
             <ul class="form-toggle__list">
               <li class="form-toggle__item form-toggle__item--cut form-toggle__item--active">
                 <label class="form-toggle__label" for="cut">
-                  <span class="form-toggle__icon form-toggle__icon--cut">Обрезка</span>
+                    <span class="visually-hidden">Обрезка</span>
+                    <svg class="form-toggle__icon form-toggle__icon--cut" role="img" width="54" height="54">
+                      <use xlink:href="img/sprite.svg#cut-tool"></use>
+                    </svg>
                 </label>
                 <input class="form-toggle__input" id="cut" type="range" name="filter" min="0" max="100" step="1" value="85">
               </li>
               <li class="form-toggle__item form-toggle__item--fill">
                 <label class="form-toggle__label" for="fill">
-                  <span class="form-toggle__icon form-toggle__icon--fill">Заливка</span>
+                  <span class="visually-hidden">Заливка</span>
+                  <svg class="form-toggle__icon form-toggle__icon--fill" role="img" width="54" height="54">
+                    <use xlink:href="img/sprite.svg#fill-tool"></use>
+                  </svg>
                 </label>
                 <input class="form-toggle__input" id="fill" type="range" name="filter" min="0" max="100" step="1" value="14">
               </li>
               <li class="form-toggle__item form-toggle__item--contrast">
                 <label class="form-toggle__label" for="contrast">
-                  <span class="form-toggle__icon form-toggle__icon--contrast">Контраст</span>
+                  <span class="visually-hidden">Контраст</span>
+                  <svg class="form-toggle__icon form-toggle__icon--contrast" role="img" width="54" height="54">
+                    <use xlink:href="img/sprite.svg#contrast-tool"></use>
+                  </svg>
                 </label>
                 <input class="form-toggle__input" id="contrast" type="range" name="filter" min="0" max="100" step="1" value="51">
               </li>
@@ -267,23 +289,41 @@
 <footer class="page-footer">
   <div class="page-footer__wrapper">
     <a class="page-footer__logo" href="#">
-      <img class="page-footer__img" src="img/footer-logo.svg" width="145" height="40" alt="Приложение для редактирования фотографий «Pink»">
+      <a class="page-footer__logo logo logo--footer" href="#" tabindex="0">
+        <svg class="logo__glasses" role="img" width="59" height="40">
+          <use xlink:href="img/sprite.svg#logo-glasses"></use>
+        </svg>
+        <svg class="logo__text" role="img" width="74" height="23">
+          <use xlink:href="img/sprite.svg#logo-text"></use>
+        </svg>
+        <svg class="logo__constellation" role="img" width="150" height="40">
+          <use xlink:href="img/sprite.svg#logo-constellation"></use>
+        </svg>
     </a>
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
           <a class="social__link social__link--twitter" href="#">
             <span class="visually-hidden">Мы в Твиттере</span>
+            <svg class="social__twitter" role="img" width="54" height="54">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--facebook" href="#">
             <span class="visually-hidden">Мы в Фейсбуке</span>
+            <svg class="social__facebook" role="img" width="54" height="54">
+              <use xlink:href="img/sprite.svg#icon-facebook"></use>
+            </svg>
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--youtube" href="#">
             <span class="visually-hidden">Мы на Ютубе</span>
+            <svg class="social__youtube" role="img" width="54" height="54">
+              <use xlink:href="img/sprite.svg#icon-youtube"></use>
+            </svg>
           </a>
         </li>
       </ul>
@@ -291,9 +331,9 @@
     <div class="page-footer__copyright copyright">
       <p class="copyright__text">Разработано</p>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <svg class="copyright__logo" width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" />
-          </svg>
+        <svg class="copyright__logo" role="img" width="27" height="34">
+          <use xlink:href="img/sprite.svg#academy-logo"></use>
+        </svg>
       </a>
     </div>
   </div>
