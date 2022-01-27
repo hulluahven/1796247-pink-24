@@ -2,3 +2,43 @@
   margin: 0;
   padding: 0;
 }
+
+.form-main__title-wrapper {
+  margin-top: -116px;
+  color: @basic-white;
+  font-weight: 300;
+  text-align: center;
+  background: url("../img/back-mobile.png") no-repeat center top 2px;
+  background-size: 100%;
+  background-color: @blue-charcoal;
+  padding: 145px 20px 44px 16px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-mobile@2x.png");
+    background-size: 100%;
+  }
+
+
+  @media (min-width: @tablet-width) {
+    margin-top: -116px;
+    padding: 183px 20px 56px 16px;
+    background: url("../img/back-tablet.png") no-repeat center top 2px;
+    background-size: 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-tablet@2x.png");
+      background-size: 100%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background: url("../img/back-desktop.png") no-repeat center top 2px;
+    background-size: 100%;
+    padding: 175px 108px 88px 108px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-desktop@2x.png");
+      background-size: 100%;
+    }
+  }
+}
