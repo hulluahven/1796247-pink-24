@@ -53,18 +53,19 @@
   position: relative;
   background: url("../img/promo-label.svg") no-repeat;
   background-color: @dusky-blue-gray;
-  background-size: auto;
+  background-size: 75px 75px;
   background-position: 0 0;
 
   @media (min-width: @tablet-width) {
     padding: 4px 0 0 2px;
-    background-position: -3px 0;
+    background-position: -3px 1px;
+    background-size: 59px 59px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0;
-    background-size: 85px 73px;
-    background-position: -7px 0;
+    background-size: 74px 73px;
+    background-position: 0 0;
+    padding: 0 0 0 2px;
   }
 }
 
@@ -83,7 +84,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 14px 0 10px 23px;
+    padding: 13px 0 11px 20px;
   }
 }
 
@@ -133,20 +134,22 @@
     position: absolute;
     width: 31px;
     height: 31px;
-    top: 21%;
+    top: 23%;
     left: 44%;
     background: url("../img/feature-added.svg") no-repeat center;
 
     @media (max-width: @mobile-width-only) {
-      left: 82%;
+      left: 83%;
     }
 
     @media (min-width: @tablet-width) {
-      left: 39%;
+      left: 41%;
+      top: 16%;
     }
 
     @media (min-width: @desktop-width) {
-      left: 43%;
+      left: 44%;
+      top: 23%;
     }
   }
 }
@@ -164,16 +167,18 @@
     background: url("../img/feature-none.svg") no-repeat center;
 
     @media (max-width: @mobile-width-only) {
-      right: 7%;
+      right: 6%;
+      top: 23%;
     }
 
     @media (min-width: @tablet-width) {
-      top: 19%;
+      top: 14%;
       right: 40%;
     }
 
     @media (min-width: @desktop-width) {
-      right: 43%;
+      right: 44%;
+      top: 23%;
     }
   }
 }

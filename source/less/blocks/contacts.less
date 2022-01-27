@@ -50,21 +50,21 @@
   flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
-    padding: 35px 0 0 0;
+    padding: 33px 0 0 0;
     display: grid;
     grid-template-areas:
       " phone mail"
       " address address";
-    padding-bottom: 180px;
+    padding-bottom: 179px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-areas: "phone address mail";
     padding-top: 40px;
-    gap: 44px;
+    gap: 53px;
     width: 920px;
     margin: 0 auto;
-    padding-bottom: 210px;
+    padding-bottom: 209px;
   }
 
   .contacts__item--phone {
@@ -90,7 +90,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 13px;
+    padding-left: 16px;
   }
 }
 
@@ -105,7 +105,7 @@
 
 .contacts__item--address {
   @media (min-width: @tablet-width) {
-    padding-top: 25px;
+    padding-top: 21px;
   }
 }
 
@@ -122,14 +122,38 @@
 
 .contacts__phone {
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 1px;
+  }
 }
 
 .contacts__mail {
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 1px;
+  }
 }
 
 .contacts__address {
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 1px;
+  }
 }
 
 .contacts__link {

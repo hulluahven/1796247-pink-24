@@ -14,8 +14,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-top: -112px;
-    padding-top: 94px;
+    margin-top: -110px;
+    padding-top: 96px;
     padding-bottom: 103px;
     background: url("../img/ihand-tablet.png") no-repeat bottom, url("../img/back-tablet.png") no-repeat center top 0;
     background-size: 660px, cover;
@@ -27,14 +27,32 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 100px 96px 107px;
-    background: url("../img/ihand-desktop.png") no-repeat bottom, url("../img/back-desktop.png") no-repeat center top;
-    background-size: 1052px, 101%;
-    background-position: 98% 100%, 100%;
+    padding: 100px 96px 109px;
+    background: url("../img/back-desktop.png") no-repeat center top;
+    background-size: cover;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/ihand-desktop@2x.png"), url("../img/back-desktop@2x.png");
-      background-size: 1052px, cover;
+      background-image: url("../img/back-desktop@2x.png");
+      background-size: cover;
+    }
+  }
+}
+
+.download__container {
+  @media (min-width: @desktop-width) {
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 2px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: url("../img/ihand-desktop.png") no-repeat center;
+      width: 758px;
+      height: 700px;
+      bottom: -136px;
+      right: 30px;
     }
   }
 }
@@ -50,11 +68,12 @@
   @media (min-width: @tablet-width) {
     margin-right: 317px;
     min-height: inherit;
-    padding-top: 112px;
+    padding-top: 108px;
   }
 
   @media (min-width: @desktop-width) {
     margin-right: 641px;
+    position: relative;
   }
 }
 
@@ -88,7 +107,7 @@
   margin: 0;
   padding-left: 0;
   list-style: none;
-  margin-top: 25px;
+  margin-top: 26px;
   display: flex;
   width: 230px;
   justify-content: center;
@@ -107,14 +126,14 @@
 }
 
 .download__icon--microsoft {
-  padding: 12px 0 0 0;
+  padding: 17px 0 0 0;
 
   @media (min-width: @tablet-width) {
-    padding: 8px 0 0 0;
+    padding: 13px 0 0 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 11px 0 0 9px;
+    padding: 18px 0 0 11px;
   }
 }
 
@@ -127,7 +146,7 @@
 }
 
 .download__icon--apple {
-  padding: 3px 0 0 0;
+  padding-top: 1px;
 
   @media (min-width: @tablet-width) {
     padding: 6px 0 0 0;
@@ -139,7 +158,6 @@
 }
 
 .download__button {
-  width: 273px;
   border: 3px solid @basic-white;
   border-radius: 29px;
   color: @basic-white;
@@ -149,6 +167,7 @@
   text-align: center;
   margin-top: 342px;
   padding: 16px 0;
+  width: 276px;
 
   @media (min-width: @tablet-width) {
     margin-top: 30px;
@@ -174,7 +193,7 @@
 
 .download__explain {
   margin: 0;
-  padding-top: 12px;
+  padding-top: 11px;
   width: 286px;
 
   @media (min-width: @tablet-width) {
@@ -187,6 +206,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 45px 0 16px 0;
+    padding: 42px 0 16px 0;
   }
 }
