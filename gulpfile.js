@@ -155,19 +155,22 @@ export const build = gulp.series(
 
 // Default
 
+// export default gulp.series(
+//   clean,
+//   copy,
+//   copyImages,
+//   gulp.parallel(
+//     styles,
+//     html,
+//     scripts,
+//     svg,
+//     sprite,
+//     createWebp
+//   ),
+//   gulp.series(
+//     server,
+//     watcher
+//   ));
 export default gulp.series(
-  clean,
-  copy,
-  copyImages,
-  gulp.parallel(
-    styles,
-    html,
-    scripts,
-    svg,
-    sprite,
-    createWebp
-  ),
-  gulp.series(
-    server,
-    watcher
-  ));
+  html ,scripts, styles, optimizeImages, copyImages, createWebp, svg, sprite, server, watcher
+);

@@ -106,8 +106,12 @@
   display: block;
 }
 
-.checkbox-fieldset__label:hover::before {
+.checkbox-fieldset__input:hover + label::before {
   border-color: @dusky-blue-gray;
+}
+
+.checkbox-fieldset__input:focus + label::before {
+  border-color: @cerise;
 }
 
 .checkbox-fieldset__label:active::before {

@@ -9,6 +9,12 @@
     <link rel="apple-touch-icon" href="img/favicons/180.png">
     <link rel="manifest" href="manifest.webmanifest">
     <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensans.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff" type="font/woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensanslight.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensanslight.woff" type="font/woff" as="font" crossorigin="anonymous">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -109,6 +115,7 @@
               <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
               <div class="advantages__image-wrapper">
                 <picture>
+                  <source type="image/webp" srcset="img/phone-gray.webp 1x, img/phone-gray@2x.webp 2x">
                   <img class="advantages__image advantages__image--gray" src="img/phone-gray.png" width="186" height="382" srcset="img/phone-gray@2x.png 2x" alt="Телефон с серым экраном">
                 </picture>
               </div>
@@ -118,22 +125,25 @@
               <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&nbsp;эффект</p>
               <div class="advantages__image-wrapper">
               <picture>
+                <source type="image/webp" srcset="img/phone-pink.webp 1x, img/phone-pink@2x.webp 2x">
                 <img class="advantages__image advantages__image--pink" src="img/phone-pink.png" width="186" height="382" srcset="img/phone-pink@2x.png 2x" alt="Телефон с розовым экраном">
               </picture>
               </div>
             </li>
             <li class="advantages__item advantages__item--friends">
-              <h3 class="advantages__title">Заводит новых друзей</h3>
+              <h3 class="advantages__title">Заводит<br class="advantages__breake"> новых друзей</h3>
               <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
               <div class="advantages__image-wrapper">
               <picture>
+                <source type="image/webp" media="(min-width:1200px)" srcset="img/phone-smile.webp 1x, img/phone-smile@2x.webp 2x">
+                <source type="image/webp" media="(min-width:660px)" srcset="img/phone-smile-tablet.webp 1x, img/phone-smile-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/phone-smile.webp 1x, img/phone-smile@2x.webp 2x">
                 <source media="(min-width: 1200px)" srcset="img/phone-smile.png 1x, img/phone-smile@2x.png 2x">
                 <source media="(min-width: 660px)" srcset="img/phone-smile-tablet.png 1x, img/phone-smile-tablet@2x.png 2x">
                 <img class="advantages__image advantages__image--smile" src="img/phone-smile.png" width="186" height="382" srcset="img/phone-smile@2x.png 2x" alt="Телефон с розовым экраном и смайликом">
               </picture>
               </div>
             </li>
-
           </ul>
         </div>
         </div>

@@ -248,6 +248,11 @@
   }
 }
 
+.form-toggle__input:focus,
+.form-toggle__input:active {
+  outline: none;
+}
+
 .form-toggle__input::-webkit-slider-thumb {
   background: @basic-white;
   border: 2px solid @cerise;
@@ -263,7 +268,8 @@
   }
 }
 
-.form-toggle__input::-webkit-slider-thumb:active {
+.form-toggle__input:active::-webkit-slider-thumb,
+.form-toggle__input:focus::-webkit-slider-thumb {
   background: @cerise;
 }
 
