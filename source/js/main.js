@@ -15,7 +15,7 @@ const isEscapeKey = (evt) => evt.key === 'Escape';
 navMain.classList.remove('main-nav--nojs');
 
 if (pageHeader.classList.contains('page-header--closed')) {
-  pageHeader.classList.remove('page-header--closed');
+    pageHeader.classList.remove('page-header--closed');
 }
 else {
   pageHeader.classList.add('page-header--closed');
@@ -36,6 +36,15 @@ navToggle.addEventListener('click', function() {
   else {
     navMain.classList.add('main-nav--closed');
     navMain.classList.remove('main-nav--opened');
+  }
+});
+
+navToggle.addEventListener('click', () => {
+  if(pageHeader.classList.contains('page-header--closed')) {
+    pageHeader.classList.remove('page-header--closed');
+  }
+  else {
+    pageHeader.classList.add('page-header--closed');
   }
 });
 
