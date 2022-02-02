@@ -60,6 +60,10 @@ const closeMessage = () => {
       if (failureMessage.classList.contains('modal-failure--show')) {
         failureMessage.classList.remove('modal-failure--show');
       }
+
+      if (successMessage.classList.contains('modal-success--show')) {
+        successMessage.classList.remove('modal-success--show');
+      }
     }
   }
 
@@ -69,6 +73,9 @@ const closeMessage = () => {
     if (failureMessage.classList.contains('modal-failure--show')) {
           failureMessage.classList.remove('modal-failure--show');
         }
+    if (successMessage.classList.contains('modal-success--show')) {
+      successMessage.classList.remove('modal-success--show');
+    }
   }
 
   document.addEventListener('keydown', onMessageEscapeKeydown);
@@ -101,6 +108,7 @@ if (pageForm) {
 
         } else {
             localStorage.setItem("name", nameField.value);
+            evt.preventDefault();
             if (successMessage.classList.contains('modal-success--show')) {
               successMessage.classList.remove('modal-success--show');
             }
@@ -128,6 +136,8 @@ if (pageForm) {
             successMessage.classList.add('modal-success--show');
           };
         });
+
+        closeMessage();
     });
 
     nameField.addEventListener("click", function (evt) {
